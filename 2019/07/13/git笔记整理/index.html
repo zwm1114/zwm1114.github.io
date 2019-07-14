@@ -1,23 +1,23 @@
 <!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>廖雪峰Git教程笔记整理 | I haven't ...</title><link rel="stylesheet" type="text/css" href="/css/normalize.css"><link rel="stylesheet" type="text/css" href="/css/highlight.css"><link rel="stylesheet" type="text/css" href="/css/very-simple.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"></head><body><!-- include the sidebar--><!-- include ./includes/sidebar.jade--><!-- Blog title and subtitle--><header><div class="container header"><a id="logo" href="/." class="title">I haven't ...</a><span class="subtitle"></span><label id="toggle-menu" for="menu" onclick><i class="fa fa-bars"></i></label></div></header><!-- use checkbox hack for toggle nav-bar on small screens--><input id="menu" type="checkbox"><!-- Navigation Links--><nav id="nav"><div class="container"><a href="/" class="sidebar-nav-item active">Home</a><a href="/archives" class="sidebar-nav-item">Archives</a><a href="/record" class="sidebar-nav-item">AboutMe</a></div></nav><div id="header-margin-bar"></div><!-- gallery that comes before the header--><div class="wrapper"><div class="container post-header"><h1>廖雪峰Git教程笔记整理</h1></div></div><div class="wrapper"><div class="container meta"><div class="post-time">2019-07-13</div></div></div><article><div class="container post"><h3 id="几个常用命令："><a href="#几个常用命令：" class="headerlink" title="几个常用命令："></a>几个常用命令：</h3><p>查看哪些文件修改了：git status</p>
 <p>查看修改的内容：git diff</p>
 <p>查看提交日志：git log</p>
-<p>简化日志信息：git log –pretty=oneline</p>
-<h3 id="一、版本管理"><a href="#一、版本管理" class="headerlink" title="一、版本管理"></a>一、版本管理</h3><h4 id="1-把当前版本回退到上一个版本"><a href="#1-把当前版本回退到上一个版本" class="headerlink" title="1.把当前版本回退到上一个版本"></a>1.把当前版本回退到上一个版本</h4><p>git reset –hard HEAD^</p>
+<p>简化日志信息：git log --pretty=oneline</p>
+<h3 id="一、版本管理"><a href="#一、版本管理" class="headerlink" title="一、版本管理"></a>一、版本管理</h3><h4 id="1-把当前版本回退到上一个版本"><a href="#1-把当前版本回退到上一个版本" class="headerlink" title="1.把当前版本回退到上一个版本"></a>1.把当前版本回退到上一个版本</h4><p>git reset --hard HEAD^</p>
 <p>git  <filename>    //查看文件内容</filename></p>
 <h4 id="2-回退到上一个版本之后又想回到这个版本"><a href="#2-回退到上一个版本之后又想回到这个版本" class="headerlink" title="2.回退到上一个版本之后又想回到这个版本"></a>2.回退到上一个版本之后又想回到这个版本</h4><p>找到该版本号（无需写全，只需写前几位，多写几位不然找不到的…）</p>
-<p>git reset –hard  <id></id></p>
+<p>git reset --hard  <id></id></p>
 <h4 id="3-当前窗口已关闭，还想回到某一个版本"><a href="#3-当前窗口已关闭，还想回到某一个版本" class="headerlink" title="3.当前窗口已关闭，还想回到某一个版本"></a>3.当前窗口已关闭，还想回到某一个版本</h4><p>git reflog    //找到版本id</p>
-<p>git reset –hard  <id></id></p>
+<p>git reset --hard  <id></id></p>
 <h3 id="二、工作区与版本库"><a href="#二、工作区与版本库" class="headerlink" title="二、工作区与版本库"></a>二、工作区与版本库</h3><p>理解他们很重要!</p>
 <p><img src="/2019/07/13/imgs/./page1.png" alt="1562992738560"></p>
-<p>commit 后，用 git diff HEAD – <filename> 查看工作区和版本库里最新版本的区别。</filename></p>
-<h4 id="1-没使用add和commit"><a href="#1-没使用add和commit" class="headerlink" title="1.没使用add和commit"></a>1.没使用add和commit</h4><p>git checkout – <filename>    //丢弃文件的修改内容</filename></p>
+<p>commit 后，用 git diff HEAD -- <filename> 查看工作区和版本库里最新版本的区别。</filename></p>
+<h4 id="1-没使用add和commit"><a href="#1-没使用add和commit" class="headerlink" title="1.没使用add和commit"></a>1.没使用add和commit</h4><p>git checkout -- <filename>    //丢弃文件的修改内容</filename></p>
 <h4 id="2-使用了add-，未使用-commit"><a href="#2-使用了add-，未使用-commit" class="headerlink" title="2.使用了add ，未使用 commit"></a>2.使用了add ，未使用 commit</h4><p>git reset HEAD <filename>    //相当于撤销掉了add命令</filename></p>
 <h4 id="3-使用了add和commit命令"><a href="#3-使用了add和commit命令" class="headerlink" title="3.使用了add和commit命令"></a>3.使用了add和commit命令</h4><p>版本回退</p>
 <h3 id="三、删除文件"><a href="#三、删除文件" class="headerlink" title="三、删除文件"></a>三、删除文件</h3><p>add和commit 之后想删除文件</p>
 <h4 id="1-确实想删除"><a href="#1-确实想删除" class="headerlink" title="1.确实想删除"></a>1.确实想删除</h4><p>git rm <filename></filename></p>
 <p>git commit -m “XXX”</p>
-<h4 id="2-手滑"><a href="#2-手滑" class="headerlink" title="2.手滑"></a>2.手滑</h4><p>git checkout – <filename>    //一键还原，就是用版本库里的版本替换工作区的版本</filename></p>
+<h4 id="2-手滑"><a href="#2-手滑" class="headerlink" title="2.手滑"></a>2.手滑</h4><p>git checkout -- <filename>    //一键还原，就是用版本库里的版本替换工作区的版本</filename></p>
 <p>ps:从未添加进版本库里的被删除的文件是无法恢复的!</p>
 <h3 id="四、远程仓库"><a href="#四、远程仓库" class="headerlink" title="四、远程仓库"></a>四、远程仓库</h3><h4 id="1-初始化本地仓库"><a href="#1-初始化本地仓库" class="headerlink" title="1.初始化本地仓库"></a>1.初始化本地仓库</h4><p>git init</p>
 <h4 id="2-添加远程仓库"><a href="#2-添加远程仓库" class="headerlink" title="2.添加远程仓库"></a>2.添加远程仓库</h4><p>git remote add <name> &lt;SSH/Https&gt;</name></p>
@@ -28,11 +28,11 @@
 <h4 id="2-查看当前分支"><a href="#2-查看当前分支" class="headerlink" title="2.查看当前分支"></a>2.查看当前分支</h4><p>git branch</p>
 <h4 id="3-切换回某个分支"><a href="#3-切换回某个分支" class="headerlink" title="3.切换回某个分支"></a>3.切换回某个分支</h4><p>git checkout <branchname></branchname></p>
 <h4 id="4-合并分支"><a href="#4-合并分支" class="headerlink" title="4.合并分支"></a>4.合并分支</h4><p>git merge <branchname></branchname></p>
-<p>ps:这种合并是快速合并，另外有 –no-ff方式合并分支</p>
-<p>git merge –no-ff -m ‘XXX’ <branchname></branchname></p>
+<p>ps:这种合并是快速合并，另外有 --no-ff方式合并分支</p>
+<p>git merge --no-ff -m ‘XXX’ <branchname></branchname></p>
 <h4 id="5-合并完分支可以删除分支"><a href="#5-合并完分支可以删除分支" class="headerlink" title="5.合并完分支可以删除分支"></a>5.合并完分支可以删除分支</h4><p>git branch -d <branchname>    //删除分支</branchname></p>
 <h3 id="六、解决冲突"><a href="#六、解决冲突" class="headerlink" title="六、解决冲突"></a>六、解决冲突</h3><h4 id="1-当两个分支都有了各自的提交"><a href="#1-当两个分支都有了各自的提交" class="headerlink" title="1.当两个分支都有了各自的提交"></a>1.当两个分支都有了各自的提交</h4><p>需要手动修改不同的内容，然后add，commit</p>
-<p>ps: git log –graph –pretty=oneline –abbrev -commit</p>
+<p>ps: git log --graph --pretty=oneline --abbrev -commit</p>
 <h3 id="七、分支管理策略"><a href="#七、分支管理策略" class="headerlink" title="七、分支管理策略"></a>七、分支管理策略</h3><h4 id="1-最佳实践："><a href="#1-最佳实践：" class="headerlink" title="1.最佳实践："></a>1.最佳实践：</h4><p>1）master分支十分稳定，用来发布新版本</p>
 <p>2）dev是用来工作的分支</p>
 <p>3）团队成员有自己的分支，往dev上合并</p>
@@ -40,7 +40,7 @@
 <p>git checkout <branchname>    //选择在哪个分支上修复bug</branchname></p>
 <p>git checkout -b <name>    //创建分支</name></p>
 <p>git checkout <branchname>    //切换回原来的分支</branchname></p>
-<p>git merge –no-ff -m ‘XXX’ <name>    //采用–no-ff方式合并分支</name></p>
+<p>git merge --no-ff -m ‘XXX’ <name>    //采用--no-ff方式合并分支</name></p>
 <p>git branch -d <name>    //合并完，删除分支</name></p>
 <p>git checkout <branchname>    //切换到原来工作的分支上</branchname></p>
 <p>git stash list     //查看现场</p>
@@ -59,7 +59,7 @@
 <p>git push origin <branchname>    //推送分支</branchname></p>
 <p>git checkout -b <localbranchname> <remotename>/<remotebranchname>    //创建远程的dev分支到本地</remotebranchname></remotename></localbranchname></p>
 <h4 id="？两人提交的代码有冲突怎么办"><a href="#？两人提交的代码有冲突怎么办" class="headerlink" title="？两人提交的代码有冲突怎么办"></a><em>？两人提交的代码有冲突怎么办</em></h4><p>git pull 会失败</p>
-<p>git branch –set-upstream-to = <name>/<branchname> <branchname>    //指定本地branch与远程branch连接</branchname></branchname></name></p>
+<p>git branch --set-upstream-to = <name>/<branchname> <branchname>    //指定本地branch与远程branch连接</branchname></branchname></name></p>
 <p>git pull    //再pull</p>
 <h3 id="九、Rebase"><a href="#九、Rebase" class="headerlink" title="九、Rebase"></a>九、Rebase</h3><p>先pull别人的然后再git rebase。</p>
 <p>作用：好看！把本地未push的分叉提交历史整理成直线，使查看历史提交变化时更容易。</p>
@@ -74,20 +74,20 @@
 <p>ps:标签总是和某个commit挂钩的，如果这个commit出现在两个不同的分支，那么这两个分支都可以看到这个标签</p>
 <h4 id="2-操作标签"><a href="#2-操作标签" class="headerlink" title="2.操作标签"></a>2.操作标签</h4><p>git tag -d <tagname>    //删除标签</tagname></p>
 <p>git push <name> <tagname>    //推送某个标签到远程</tagname></name></p>
-<p>git push <name> –tags    //推送全部未推送到远程的本地标签</name></p>
+<p>git push <name> --tags    //推送全部未推送到远程的本地标签</name></p>
 <p>若标签已推送到远程</p>
 <p>git tag -d <tagname>    //先本地删除</tagname></p>
 <p>git push <name> :refs/tags/<tagname>    //从远程删除</tagname></name></p>
 <p>其他：git remote rm <name>    //删除已有的github远程库</name></p>
 <h3 id="十一、自定义git"><a href="#十一、自定义git" class="headerlink" title="十一、自定义git"></a>十一、自定义git</h3><h4 id="1-忽略特殊文件"><a href="#1-忽略特殊文件" class="headerlink" title="1.忽略特殊文件"></a>1.忽略特殊文件</h4><p>没懂…</p>
-<h4 id="2-配置别名"><a href="#2-配置别名" class="headerlink" title="2.配置别名"></a>2.配置别名</h4><p>git config –global alias.<replacename> <name></name></replacename></p>
-<p>例如：git config –global alias.lg “log –graph –pretty=oneline –abbrev-commit”</p>
+<h4 id="2-配置别名"><a href="#2-配置别名" class="headerlink" title="2.配置别名"></a>2.配置别名</h4><p>git config --global alias.<replacename> <name></name></replacename></p>
+<p>例如：git config --global alias.lg “log --graph --pretty=oneline --abbrev-commit”</p>
 <p>​    输入git lg 即可查看分支合并情况</p>
 <p>配置信息在隐藏目录  .git/config 中</p>
 <p>ps:global参数是全局参数，也就是这些命令在这台电脑的所有git仓库下都有用</p>
 <p>十二、个人遇到的错误及解决办法</p>
 <p>refusing to merge unrelated histories*  本地仓库和远程不是同一个仓库，无法合并两个独立的仓库历史</p>
-<p>解决办法：git pull <name> <branchname> –allow-unrelated-histories</branchname></name></p>
+<p>解决办法：git pull <name> <branchname> --allow-unrelated-histories</branchname></name></p>
 <p>​        git push <name> <localbranch>:<remotebranch></remotebranch></localbranch></name></p>
 <h4 id="资源："><a href="#资源：" class="headerlink" title="资源："></a>资源：</h4><p><a href="https://gitee.com/liaoxuefeng/learn-java/raw/master/teach/git-cheatsheet.pdf" target="_blank" rel="noopener">Git Cheat Sheet</a></p>
 <p><a href="https://git-scm.com/" target="_blank" rel="noopener">Git官方网站</a></p>
