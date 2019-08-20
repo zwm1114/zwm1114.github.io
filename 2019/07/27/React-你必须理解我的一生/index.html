@@ -1,0 +1,76 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>React:你必须理解我的一生 | I haven't ...</title><link rel="stylesheet" type="text/css" href="/css/normalize.css"><link rel="stylesheet" type="text/css" href="/css/highlight.css"><link rel="stylesheet" type="text/css" href="/css/very-simple.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"></head><body><!-- include the sidebar--><!-- include ./includes/sidebar.jade--><!-- Blog title and subtitle--><header><div class="container header"><a id="logo" href="/." class="title">I haven't ...</a><span class="subtitle"></span><label id="toggle-menu" for="menu" onclick><i class="fa fa-bars"></i></label></div></header><!-- use checkbox hack for toggle nav-bar on small screens--><input id="menu" type="checkbox"><!-- Navigation Links--><nav id="nav"><div class="container"><a href="/" class="sidebar-nav-item active">Home</a><a href="/archives" class="sidebar-nav-item">Archives</a><a href="/record" class="sidebar-nav-item">AboutMe</a></div></nav><div id="header-margin-bar"></div><!-- gallery that comes before the header--><div class="wrapper"><div class="container post-header"><h1>React:你必须理解我的一生</h1></div></div><div class="wrapper"><div class="container meta"><div class="post-time">2019-07-27</div></div></div><article><div class="container post"><p>上次写的“理解react的生命周期”，我是真的没理解，nashiwoxiaxiede…</p>
+<p><img src="D:%5Czoe%5Chexo%5Cpublic%5C2019%5C07%5C27%5Cimgs%5Chead.jpg" alt="head"></p>
+<p>好吧，我反思，我重新写。</p>
+<h3 id="1-组件的生命周期"><a href="#1-组件的生命周期" class="headerlink" title="1.组件的生命周期"></a>1.组件的生命周期</h3><p>首先，组件是什么，组件是页面的一部分，好比一棵树，组件就是树叶。树叶从萌芽到凋零，组件也有其生命周期，很好奇当初发明组件这个思想的人是由什么得到的启发呢？计算机学科作为一门科学，也是与现实世界紧密联系的，像操作系统中的信号量就是由交通灯得到的启发，那组件呢？</p>
+<p>树叶萌芽时得有一个充分条件吧，首先它得有个爸爸——树，然后天气也得暖和点了吧，再来点雨水就更好了，组件在第一次挂载的时候首先要获取父控件传递的props值，就好像树给小树叶们发了个指令：“儿砸们，出来吧，春天到了。”，小树叶们接收到了指令还不够，还要自己做好面对这个世界的准备，所以组件还要初始化state值，至此，准备工作已经做好。</p>
+<p><img src="D:%5Czoe%5Chexo%5Cpublic%5C2019%5C07%5C27%5Cimgs%5Ctimg.jpg" alt="timg"></p>
+<p>从此，组件的生命周期才算真正开始。这个过程比喻成画一片树叶更为合适。</p>
+<p>先要构图，画出树叶的轮廓，这里调用的是</p>
+<ul>
+<li>挂载时(Mounting)</li>
+<li>更新时(Updating)</li>
+<li>卸载时(UnMounting)</li>
+</ul>
+<h2 id="挂载时"><a href="#挂载时" class="headerlink" title="挂载时"></a>挂载时</h2><p>当创建一个组建的时候，它会挂载到DOM上。</p>
+<p><strong>constructor()</strong></p>
+<ul>
+<li>当页面加载的时候，最初也是唯一一次被调用</li>
+<li>用于做一些初始化状态的操作</li>
+<li>唯一可以修改state的地方(因为react一般想要修改state，一般会调用setState方法)</li>
+</ul>
+<p><strong>static getDerivedStateFromProps(nextProps, prevState)</strong></p>
+<ul>
+<li>当state需要从props初始化时使用</li>
+<li>每次render或者rerender的时候都会调用</li>
+</ul>
+<p><strong>render()</strong></p>
+<ul>
+<li>这是类组件中唯一必需的方法</li>
+<li>每次React更新并提交到DOM的时候调用</li>
+</ul>
+<p><strong>componentDidMount()</strong></p>
+<ul>
+<li>在构造组件并将其添加到DOM上(渲染后)只执行一次</li>
+<li>可用于获取数据并在渲染完成后立即显示</li>
+<li>典型场景：获取外部资源</li>
+</ul>
+<h2 id="更新时"><a href="#更新时" class="headerlink" title="更新时"></a>更新时</h2><p>每当一个组件的state和props改变的时候，将在页面上重新进行渲染</p>
+<p><strong>static getDerivedStateFromProps(nextProps, prevState)</strong></p>
+<ul>
+<li>每次页面render之前调用，state已更新</li>
+<li>典型场景：获取render之前的DOM状态</li>
+<li>很少使用：将props复制到state</li>
+</ul>
+<p><strong>shouldComponentUpdate(nextProps, nextState)</strong></p>
+<ul>
+<li>返回一个布尔类型的值，默认返回true</li>
+<li>在渲染(render)之前或组件接受到新的state和props的时候马上执行</li>
+<li>在每次重新渲染之前调用，但不是初始化操作时调用</li>
+<li>决定Virtual Dom是否要重绘</li>
+<li>对于性能优化，可以做一些不必重新渲染的操作</li>
+</ul>
+<p><strong>render()</strong></p>
+<ul>
+<li>对于一个类组件，这是唯一必需的方法</li>
+<li>对于更新，如果shouldComponentUpdate（）返回false，则不会调用render（）。</li>
+</ul>
+<p><strong>getSnapshotBeforeUpdate(prevProps, prevState)</strong></p>
+<ul>
+<li>此方法允许我们捕获在呈现该组件之前未存储在该状态中的某些属性。（即，如果用户滚动到页面上的特定位置，并且我们想要存储该位置并在以后使用它）</li>
+<li>在React更新并提交新的内容到DOM之前调用</li>
+<li>很少使用但可以捕获可能快速变化的数据</li>
+</ul>
+<p><strong>componentDidUpdate(previousProps, previousState, snapshot)</strong></p>
+<ul>
+<li>在组件已经重新渲染之后调用</li>
+<li>用于渲染后的任何DOM更新</li>
+</ul>
+<h2 id="卸载时"><a href="#卸载时" class="headerlink" title="卸载时"></a>卸载时</h2><p>在此阶段，组件将被删除并从DOM中清除</p>
+<p><strong>componentWillUnmount</strong></p>
+<ul>
+<li>在从DOM卸载组件之前调用它，做一些回收类的操作，如清除定时器等</li>
+</ul>
+</div><!-- comment system--><div class="container"><hr></div></article><footer id="footer"><div class="container"><div class="bar"><div class="social"><a href="mailto:zwm1114@163.com" target="_blank"><i class="fa fa-envelope-o"></i></a><a href="https://github.com/zwm1114" target="_blank"><i class="fa fa-github"></i></a></div><div class="footer">© 2019 <a href="/" rel="nofollow">Zhaowm</a>. Powered by <a rel="nofollow" target="_blank" href="https://hexo.io">Hexo</a>. Theme <a target="_blank" href="https://github.com/lotabout/very-simple">very-simple</a>.</div></div></div></footer><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.css"><script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script><script src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>$(document).ready(function() {
+    $(".fancybox").fancybox();
+});
+</script></body></html>
