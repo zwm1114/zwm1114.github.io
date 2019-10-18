@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <title>demo:订单列表 | I haven&#39;t ...</title>
+  <meta name="keywords" content>
+  <meta name="description" content="demo:订单列表 | I haven&#39;t ...">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="haha~ have a nice day！">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AboutMe">
+<meta property="og:url" content="http://yoursite.com/record/index.html">
+<meta property="og:site_name" content="I haven&#39;t ...">
+<meta property="og:description" content="haha~ have a nice day！">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-15T01:35:48.436Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AboutMe">
+<meta name="twitter:description" content="haha~ have a nice day！">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<script src="/js/iconfont.js?v=1.0.1"></script>
+
+</head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value>
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>Zhaowm</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="rss" href="/atom.xml" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-rss"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="github" href="https://github.com/yelog" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="facebook" href="https://www.facebook.com/faker.tops" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-facebook"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+        <a title="instagram" href="https://www.facebook.com/faker.tops" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-instagram"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="reddit" href="https://www.reddit.com/user/yelog/" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-reddit"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="weibo" href="http://weibo.com/u/2307534817" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-weibo"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="jianshu" href="https://www.jianshu.com/u/ff56736de7cf" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-jianshu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="zhihu" href="https://www.zhihu.com/people/jaytp/activities" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-zhihu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+        <a title="oschina" href="https://my.oschina.net/yelog" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-oschina"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+        <a title="email" href="mailto:jaytp@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=872336115&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="kugou" href="https://www.kugou.com/" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-kugou"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="neteasemusic" href="https://music.163.com/#/user/home?id=88151013" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-neteasemusic"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(8)</small></div></li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="8">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="Search..." autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class=""
+           href="/2019/07/10/0-1-0-2/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="0.1+0.2=?">0.1+0.2=?</span>
+            <span class="post-date" title="2019-07-10 12:36:47">2019/07/10</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/08/20/使用antd的Table组件对一列数据进行排序/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="使用antd的Table组件对一列数据进行排序">使用antd的Table组件对一列数据进行排序</span>
+            <span class="post-date" title="2019-08-20 20:32:19">2019/08/20</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/07/13/git笔记整理/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="廖雪峰Git教程笔记整理">廖雪峰Git教程笔记整理</span>
+            <span class="post-date" title="2019-07-13 12:18:03">2019/07/13</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/07/04/理解React生命周期/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="理解React生命周期">理解React生命周期</span>
+            <span class="post-date" title="2019-07-04 21:38:35">2019/07/04</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/07/09/学会使用canvas/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="学会使用canvas（1）">学会使用canvas（1）</span>
+            <span class="post-date" title="2019-07-09 12:59:43">2019/07/09</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/10/12/让gitpush更优雅动人/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="让gitpush更优雅动人">让gitpush更优雅动人</span>
+            <span class="post-date" title="2019-10-12 19:52:56">2019/10/12</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/07/27/demo-订单列表/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="demo:订单列表">demo:订单列表</span>
+            <span class="post-date" title="2019-07-27 16:34:14">2019/07/27</span>
+        </a>
+        
+        <a  class=""
+           href="/2019/07/15/笔记：import和export的使用/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="笔记：import和export的使用">笔记：import和export的使用</span>
+            <span class="post-date" title="2019-07-15 09:36:41">2019/07/15</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-demo-订单列表" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">demo:订单列表</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2019-08-01 21:45:04'>2019-07-27 16:34</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-项目搭建"><span class="toc-text">1.项目搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-项目目录"><span class="toc-text">2.项目目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-目录说明"><span class="toc-text">3.目录说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-组件间的数据通信"><span class="toc-text">4.组件间的数据通信</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#OrderList-index-js"><span class="toc-text">OrderList/index.js</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OrderItem-index-js"><span class="toc-text">OrderItem/index.js</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>看哈效果图：</p>
+<p><img src="/2019/07/27/imgs/./GIF.gif" alt></p>
+<h3 id="1-项目搭建"><a href="#1-项目搭建" class="headerlink" title="1.项目搭建"></a>1.项目搭建</h3><p>工具链用的是 Create React App</p>
+<p>直接安装</p>
+<p><code>npm create-react-app demo</code></p>
+<p>运行看哈效果</p>
+<p><code>npm start</code></p>
+<p><img src="/2019/07/27/imgs/./1564219543793.png" alt="1564219543793"></p>
+<h3 id="2-项目目录"><a href="#2-项目目录" class="headerlink" title="2.项目目录"></a>2.项目目录</h3><p><img src="/2019/07/27/imgs/./1564495671212.png" alt="1564495671212"></p>
+<p>我们需要改动一下目录，创建一个components的文件夹，这里存放所有的组件，组件的文件结构如下所示，调用的时候直接导入就可以<code>import App from &#39;./component/App&#39;;</code>，以App组件为例：</p>
+<p><img src="/2019/07/27/imgs/./1564495784517.png" alt="1564495784517"></p>
+<h3 id="3-目录说明"><a href="#3-目录说明" class="headerlink" title="3.目录说明"></a>3.目录说明</h3><p>index.js文件时整个项目的入口文件，在该文件中调用了App组件</p>
+<p><code>ReactDOM.render(&lt;App /&gt;, document.getElementById(&#39;root&#39;));</code></p>
+<p>ReactDOM.render()是用于将模板转为 HTML 语言，并插入指定的 DOM 节点，public 文件中的index.html中定义了id为‘root’的div元素，这里将App组件插入进div中。</p>
+<p>在App组件中调用其他的组件。</p>
+<h3 id="4-组件间的数据通信"><a href="#4-组件间的数据通信" class="headerlink" title="4.组件间的数据通信"></a>4.组件间的数据通信</h3><p>这里创建了三个组件： Header OrderItem OrderList</p>
+<p>Header是渲染整个页面头部部分，它没有和其他组件进行通信，进行下样式的调整即可。</p>
+<p>OrderList是渲染出整个页面的订单列表，每个列表由OrderItem渲染出，OrderList是OrderItem的父组件，相对地，OrderItem是OrderList的子组件。</p>
+<h4 id="OrderList-index-js"><a href="#OrderList-index-js" class="headerlink" title="OrderList/index.js"></a>OrderList/index.js</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">constructor(props)&#123;</span><br><span class="line">	super(props);</span><br><span class="line">	this.state = &#123;data: []&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>OrderList组件在constructor中，获取父组件的props,并且初始化state。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">componentDidMount()&#123;</span><br><span class="line">	 fetch(&apos;/mock/orders.json&apos;).then(res =&gt;&#123;</span><br><span class="line">	 	console.log(&quot;res:&quot;,res);</span><br><span class="line">	 	if(res.ok)&#123;</span><br><span class="line">	 		res.json().then(data =&gt; &#123; </span><br><span class="line">	 			console.log(&quot;data:&quot;,data);</span><br><span class="line">	 			this.setState(&#123;</span><br><span class="line">	 				data</span><br><span class="line">	 			&#125;)</span><br><span class="line">	 		&#125;)</span><br><span class="line">	 	&#125;</span><br><span class="line">	 &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在componentDidMount（）中，使用fetch获取mock数据，在public中新建文件夹mock,里面新建文件存放mock数据。获取成功的话，返回一个promise对象，再将里面的数据取出，用setState更新data。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">render() &#123;</span><br><span class="line">		return (</span><br><span class="line">			&lt;div&gt;</span><br><span class="line">			&#123;</span><br><span class="line">				this.state.data.map(item =&gt;&#123;</span><br><span class="line">					return &lt;OrderItem key=&#123;item.id&#125; data=&#123;item&#125; onSubmit=&#123;this.handleSubmit&#125;/&gt;</span><br><span class="line">				&#125;)</span><br><span class="line">			&#125;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line">		)</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在render函数中调用OrderItem组件，将data通过props传递给OrderItem组件。通过handleSubmit将数据提交给后端（因为没有后端接口，与后端交互的功能暂时没有实现），同时更新state中的data数据。</p>
+<h4 id="OrderItem-index-js"><a href="#OrderItem-index-js" class="headerlink" title="OrderItem/index.js"></a>OrderItem/index.js</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">constructor(props)&#123;</span><br><span class="line">		super(props);</span><br><span class="line">		this.state =&#123;</span><br><span class="line">			editing: false,</span><br><span class="line">			stars: this.props.stars || 0,</span><br><span class="line">			comment: this.props.comment ||&apos;&apos;</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
+
+<p>同理，先获取父组件的props,并初始化state.</p>
+<p>editing判断是否出现评价编辑框。</p>
+<p>初始化stars为父组件传过来的数值（已评价）或者为0（未评价）。</p>
+<p>同理，comment亦是。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">render() &#123;</span><br><span class="line">		const &#123;shop,price,product,picture,ifcommented&#125; = this.props.data;</span><br><span class="line">		return (</span><br><span class="line">		&lt;div&gt;</span><br><span class="line">		&lt;div className=&apos;orderItem&apos;&gt;</span><br><span class="line">			&lt;div className=&apos;orderItem__picContainer&apos;&gt;</span><br><span class="line">				&lt;img className=&apos;orderItem__pic&apos; src=&#123;picture&#125;/&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line">			&lt;div className=&apos;orderItem__content&apos;&gt;</span><br><span class="line">				&lt;div className=&apos;orderItem__product&apos;&gt;&#123;product&#125;&lt;/div&gt;</span><br><span class="line">				&lt;div className=&apos;orderItem__shop&apos;&gt;&#123;shop&#125;&lt;/div&gt;</span><br><span class="line">				&lt;div className=&apos;orderItem__detail&apos;&gt;</span><br><span class="line">					&lt;div className=&apos;orderItem__price&apos;&gt;&#123;price&#125;&lt;/div&gt;</span><br><span class="line">					&lt;div&gt;</span><br><span class="line">					&#123;</span><br><span class="line">						ifcommented </span><br><span class="line">						? </span><br><span class="line">						(&lt;button className=&apos;orderItem__btn orderItem__btn--grey&apos;&gt;已评价&lt;/button&gt;)</span><br><span class="line">						:</span><br><span class="line">						(&lt;button className=&apos;orderItem__btn orderItem__btn--red&apos; </span><br><span class="line">							onClick=&#123;this.handleEditArea&#125;&gt;评价&lt;/button&gt;)</span><br><span class="line">					&#125;</span><br><span class="line">					&lt;/div&gt;</span><br><span class="line">				&lt;/div&gt;</span><br><span class="line">			&lt;/div&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		&#123;this.state.editing?this.renderEditArea():null&#125;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在render中把获取的数据渲染到页面上，注意到，这里通过ifcommented来判断是否可以评价，如果未评价过，点击<strong>评价</strong>按钮，通过handleEditArea更新editing的值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">handleEditArea = () =&gt; &#123;</span><br><span class="line">			this.setState(&#123;</span><br><span class="line">				editing: true</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>再回到render中，editing初始化为false，所以不显示评价文本框，当更新了state之后，editing为true,出现评价文本框。用renderEditArea来显示文本框。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">renderEditArea() &#123;</span><br><span class="line">			return (</span><br><span class="line">					&lt;div className=&quot;orderItem__commentContainer&quot;&gt;</span><br><span class="line">						&lt;textarea className=&quot;orderItem__comment&quot; </span><br><span class="line">						onChange=&#123;this.handleCommentChange&#125; value=&#123;this.state.comment&#125;/&gt;</span><br><span class="line">						&#123;this.renderStars()&#125;</span><br><span class="line">						&lt;button className=&quot;orderItem__btn orderItem__btn--red&quot; </span><br><span class="line">						onClick=&#123;this.handleCommentSubmit&#125;&gt;提交&lt;/button&gt;</span><br><span class="line">						&lt;button className=&quot;orderItem__btn orderItem__btn--grey&quot; </span><br><span class="line">						onClick=&#123;this.handleCommentCancle&#125;&gt;取消&lt;/button&gt;</span><br><span class="line">					&lt;/div&gt;</span><br><span class="line">				);</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
+
+<p>文本框中默认显示的是state中comment的内容，当输入内容时，调用handleCommentChange，更新comment。</p>
+<p>评价星星那里用renderStars显示。主要代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	[1,2,3,4,5].map((item,index) =&gt; &#123;</span><br><span class="line">		const lightClass = stars &gt;= item ?</span><br><span class="line">		&quot;orderItem__star--light&quot;:&quot;&quot;;</span><br><span class="line">		return(</span><br><span class="line">			&lt;span</span><br><span class="line">			key=&#123;index&#125; </span><br><span class="line">			className=&#123;&quot;orderItem__star &quot; + lightClass&#125;</span><br><span class="line">			onClick=&#123;this.handleClickStars.bind(this, item)&#125;</span><br><span class="line">			&gt;</span><br><span class="line">			★</span><br><span class="line">			&lt;/span&gt;</span><br><span class="line">			);</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过数组的map方法，显示出五个星星，点击的时候，通过handleClickStars更新stars的值。</p>
+<p>再回到renderEditArea中，点击提交按钮，调用handleCommentSubmit函数，更新editing的值为false,这时就关闭了评价按钮了，并把参数传递给onSubmit（还记得OrderList中调用组件OrderItem时写了个onSubmit属性吗？onSubmit的属性值是一个函数，这个函数获取参数，把参数提交给后端）。</p>
+<p>若点击<strong>取消</strong>按钮，则调用handleCommentCancle函数，将state值恢复为初始值。</p>
+<p>和后端交互主要是在OrderList组件中，可以通过fetch与后端进行交互。</p>
+<p><a href="https://github.com/zwm1114/reactdemo" target="_blank" rel="noopener">项目源码</a></p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>demo:订单列表</p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="Zhaowm">Zhaowm</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-07-27, 16:34:14</p>
+    <p><span class="copy-title">最后更新:</span>2019-08-01, 21:45:04</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/07/27/demo-订单列表/" title="demo:订单列表">http://yoursite.com/2019/07/27/demo-订单列表/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2016-2019 Yelog</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.0.1" ></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': [],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
