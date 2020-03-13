@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>学会使用canvas（1） | 一颗土豆子</title>
+  <title>something about react | 一颗土豆子</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -156,60 +156,90 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2019-07-09T04:59:43.000Z" itemprop="datePublished">
-          2019-07-09
+      <time datetime="2019-12-14T03:20:47.000Z" itemprop="datePublished">
+          2019-12-14
       </time>
     
 </span>
-                <h1>学会使用canvas（1）</h1>
+                <h1>something about react</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h3 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h3><p>1.获取canvas对象</p>
-<p>2.获取上下文环境对象context（哈哈，这个名字好中二呀…），用context对象的属性和方法来绘制各种图形</p>
-<p>3.开始绘制图形</p>
-<p>推荐官方文档：<a href="http://www.w3.org/TR/2dcontext/" target="_blank" rel="noopener">www.w3.org/TR/2dcontext/</a></p>
-<h3 id="绘制线段、三角形、矩形"><a href="#绘制线段、三角形、矩形" class="headerlink" title="绘制线段、三角形、矩形"></a>绘制线段、三角形、矩形</h3><p>准备工作：想象自己手中有支笔，屏幕就是画布，现在可以开始了。</p>
-<h4 id="1-绘制线段"><a href="#1-绘制线段" class="headerlink" title="1.绘制线段"></a>1.绘制线段</h4><p>落笔：<code>moveTo()</code></p>
-<p>定点：<code>lineTo()</code></p>
-<p>连线：<code>stroke()</code></p>
-<p>练习画一个”Z”字</p>
-<p><img src="/2019/07/09/imgs/./z.png" alt="Z"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//Z型</span><br><span class="line">        d.moveTo(50,50);</span><br><span class="line">        d.lineTo(100,50);</span><br><span class="line">        d.lineTo(50,100);</span><br><span class="line">        d.lineTo(100,100);</span><br><span class="line">        d.stroke();</span><br></pre></td></tr></table></figure>
+      		<p><img src="/2019/12/14/imgs/undraw_react_y7wq.png" alt="react"></p>
+<p>“粉条，最近的react学得咋样啊？”</p>
+<p>“我不想学了”</p>
+<p>“为什么呢？”</p>
+<p>“因为我觉得我用html css javaScript用着挺顺手的，干嘛非得学这个？”</p>
+<p>“不能半途而废啊！”</p>
+<p>“我不管，除非你能用充分的理由说服我。”</p>
+<p>“好吧。去准备点瓜子吧。”</p>
+<p>“好嘞，爷。”</p>
+<p>“首先你知道什么是react吗？”</p>
+<p>“额…我看网上的解释是一个用于构建用户界面的javaScript库。”</p>
+<p>“知道这句话什么意思吗？”</p>
+<p>“额，字都认识，连在一起就不懂是什么意思了。”</p>
+<p>“哪里不懂？”</p>
+<p>“构建用户界面我懂，就是写网页嘛，就是和我用html css写出的网页是一样的，还非得说得文邹邹的，净整些没用的。”</p>
+<p>“是啊，所以建议你以后别看百度了，直接谷歌，那些英文解释反而更好理解。是哪里不懂呢？”</p>
+<p>“javaScript库是什么？我家的车库装的是车，JavaScript库装的是哪个牌子的车？”</p>
+<p>“……JavaScript牌的。”</p>
+<p>“哈哈哈哈，这个牌子的车好开吗？”</p>
+<p>“挺好开的，毕竟那么多人开它。你知道JavaScript是干嘛用的吗？”</p>
+<p>“写文章的那支笔。”</p>
+<p>“额…还记着呢。你打开淘宝主页，那些图片，还有输入框，以及整个页面的排版，这些基础的静态结构是用HTML和css写出的。”</p>
+<p>“你要在输入框中输入你想搜索的东西，知道这是谁负责处理的吗？”</p>
+<p>“JavaScript？”</p>
+<p>“没错，JavaScript就是让网页活起来的那支点睛之笔。你家车库里的车多吗？”</p>
+<p>“多呀，有自行车还有自行车还有自行车以及自行车…..”</p>
+<p>“都是同一种类型的吗？”</p>
+<p>“不是哦，有山地车，公路车，折叠车，还有旅行车还有…”</p>
+<p>“是挺多的…”</p>
+<p>“JavaScript库里面也是有很多车吗？”</p>
+<p>“是的。猜猜为什么在库里装那么多车？”</p>
+<p>“嗯，是为了避免重复的工作。比如说，我想周末骑车出去玩，我就骑山地车，速度快，但是如果我平时上学我就骑公路车，不同的场景下我骑不同的车，我告诉你哦，我的第一辆公路车我想把他速度加快点，就自己改装，然后他就被我爸卖去了废品站了。”</p>
+<p>“你记住下次能花钱买的，就别自己动手，挺费钱的。”</p>
+<p>“……”</p>
+<p>“在编写网页的时候，你想要实现一个功能，这个功能之前已经有人实现过了，而且就放在javaScript库中，你就别自己重复造轮子了，时间还是挺值钱的，当然，如果你对别人是如何实现这个功能很感兴趣的话，你可以研究研究源码。”</p>
+<p>“谢谢，我不感兴趣。”</p>
+<p>“JavaScript库里面就有一辆，不是，是一个名为react js的库。”</p>
+<p>“是他很好用还是其他的库不好用？”</p>
+<p>“一半一半吧，在react js出生之前，前端开发者写页面是纯手工的，或者是用像jQuery这样不注重ui的框架，说到jQuery，他也算是react js的爸爸了。这样开发页面开发周期长而且也更容易出现错误和bug。”</p>
+<p>“哦……原来如此，可是我写页面也没有感觉原生JavaScript不好用啊？”</p>
+<p>“你都开发了什么页面？”</p>
+<p>“把我的全家福放在网页上展示了。”</p>
+<p>“……不怪你，以后开发大型项目的时候，你用原生JavaScript写我就敬你是条汉子。”</p>
+<p>“那为啥react js 这么霸道呢？”</p>
+<p>“因为他有两大杀器：JSX和virtual DOM！”</p>
+<p>“virtual DOM我知道，你昨天和我说过，那JSX又是什么呢？”</p>
+<p>“昨天说过了可以用JavaScript来更改DOM从而动态的展示网页是不是？”</p>
+<p>“嗯，是。”</p>
+<p>“JSX的英文名是 short for JavaScript eXtension,现在能猜到是什么意思了吗？”</p>
+<p>“就是JavaScript的精简版呗？”</p>
+<p>“额，其实不全是。看看这个代码，就是用JSX写的。”</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> element = &lt;h1&gt;Hello, world!&lt;/h1&gt;;</span><br></pre></td></tr></table></figure>
 
-<p>ps:首先要获取canvas的上下文对象。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var canvas = document.getElementById(&quot;background&quot;);</span><br><span class="line">var d = canvas.getContext(&apos;2d&apos;);</span><br></pre></td></tr></table></figure>
 
-<h4 id="2-绘制三角形"><a href="#2-绘制三角形" class="headerlink" title="2.绘制三角形"></a>2.绘制三角形</h4><p><img src="/2019/07/09/imgs/./rt.png" alt="RT"></p>
-<p>一样是先落笔然后定点，连线。这里只画了两条线段，使用closePath()可以自动闭合图形。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//直角三角形</span><br><span class="line">        d.moveTo(400,400);</span><br><span class="line">        d.lineTo(500,300);</span><br><span class="line">        d.lineTo(500,400);</span><br><span class="line">        d.closePath()</span><br><span class="line">        d.stroke();</span><br></pre></td></tr></table></figure>
 
-<h4 id="3-绘制矩形"><a href="#3-绘制矩形" class="headerlink" title="3.绘制矩形"></a>3.绘制矩形</h4><p>绘制矩形有好几种方法：</p>
-<h5 id="（1）连线法——用线段连接而成"><a href="#（1）连线法——用线段连接而成" class="headerlink" title="（1）连线法——用线段连接而成"></a>（1）连线法——用线段连接而成</h5><p><img src="/2019/07/09/imgs/./rectangle.png" alt="RECTANGLE"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//矩形</span><br><span class="line">        d.moveTo(400,100);</span><br><span class="line">        d.lineTo(600,100);</span><br><span class="line">        d.lineTo(600,200);</span><br><span class="line">        d.lineTo(400,200);</span><br><span class="line">        d.closePath();</span><br><span class="line">        d.stroke();</span><br></pre></td></tr></table></figure>
-
-<h5 id="（2）使用strokeRect-和fillRect-方法"><a href="#（2）使用strokeRect-和fillRect-方法" class="headerlink" title="（2）使用strokeRect()和fillRect()方法"></a>（2）使用strokeRect()和fillRect()方法</h5><p><img src="/2019/07/09/imgs/./other.png" alt="OTHER"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//使用方法画矩形</span><br><span class="line">        //矩形框框</span><br><span class="line">        d.strokeStyle = &quot;#00111e&quot;</span><br><span class="line">        d.strokeRect(700,100,100,50);</span><br><span class="line">        //填充</span><br><span class="line">        //矩形块块</span><br><span class="line">        d.fillStyle = &quot;pink&quot;</span><br><span class="line">        d.fillRect(700,200,100,50);</span><br></pre></td></tr></table></figure>
-
-<p>注意：strokeStyle属性和fillStyle属性要写在方法之前，不然不起作用的。</p>
-<h5 id="（3）使用rect-方法"><a href="#（3）使用rect-方法" class="headerlink" title="（3）使用rect()方法"></a>（3）使用rect()方法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//使用rect和stroke绘制矩形框框</span><br><span class="line">        d.rect(300,250,100,100);</span><br><span class="line">        d.strokeStyle = &quot;red&quot;;</span><br><span class="line">        d.stroke();</span><br><span class="line">//使用rect和fill绘制矩形块块</span><br><span class="line">        d.rect(400,250,100,100);</span><br><span class="line">        d.fillStyle = &quot;#00111e&quot;;</span><br><span class="line">        d.fill();</span><br></pre></td></tr></table></figure>
-
-<p>另外，使用clearRect()方法可以清除指定区域的矩形块。</p>
-<p>此外，所有的方法的参数都是（X轴坐标，Y轴坐标，矩形宽度，矩形高度）</p>
-<p>再另外说明一点，这里使用的坐标都是”W3C坐标系“而不是数学中的坐标系。</p>
+<p>“额，有点奇怪哎，像JavaScript又像HTML。”</p>
+<p>“是的。”</p>
+<p>……</p>
+<p>“没了？”</p>
+<p>“没了。”</p>
+<p>“今天就说这些了？”</p>
+<p>“嗯，回家喝鱼汤了。”</p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2019/07/10/0-1-0-2/" style="float: left;">
-        ← 0.1+0.2=?
+    <a class="pull-left" href="/2019/12/14/what-is-redux/" style="float: left;">
+        ← what is redux?
     </a>
     
     
-    <a class="pull-right" href="/2019/07/04/理解React生命周期/">
-        理解React生命周期 →
+    <a class="pull-right" href="/2019/12/13/what-is-DOM/">
+        what is DOM? →
     </a>
     
 </nav>

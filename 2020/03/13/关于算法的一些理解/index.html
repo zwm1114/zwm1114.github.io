@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>学会使用canvas（1） | 一颗土豆子</title>
+  <title>关于算法的一些理解 | 一颗土豆子</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -156,60 +156,51 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2019-07-09T04:59:43.000Z" itemprop="datePublished">
-          2019-07-09
+      <time datetime="2020-03-13T09:00:19.000Z" itemprop="datePublished">
+          2020-03-13
       </time>
     
+    
+    | 
+    <a href='/tags/算法/'>算法</a>
+    
+    
 </span>
-                <h1>学会使用canvas（1）</h1>
+                <h1>关于算法的一些理解</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h3 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h3><p>1.获取canvas对象</p>
-<p>2.获取上下文环境对象context（哈哈，这个名字好中二呀…），用context对象的属性和方法来绘制各种图形</p>
-<p>3.开始绘制图形</p>
-<p>推荐官方文档：<a href="http://www.w3.org/TR/2dcontext/" target="_blank" rel="noopener">www.w3.org/TR/2dcontext/</a></p>
-<h3 id="绘制线段、三角形、矩形"><a href="#绘制线段、三角形、矩形" class="headerlink" title="绘制线段、三角形、矩形"></a>绘制线段、三角形、矩形</h3><p>准备工作：想象自己手中有支笔，屏幕就是画布，现在可以开始了。</p>
-<h4 id="1-绘制线段"><a href="#1-绘制线段" class="headerlink" title="1.绘制线段"></a>1.绘制线段</h4><p>落笔：<code>moveTo()</code></p>
-<p>定点：<code>lineTo()</code></p>
-<p>连线：<code>stroke()</code></p>
-<p>练习画一个”Z”字</p>
-<p><img src="/2019/07/09/imgs/./z.png" alt="Z"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//Z型</span><br><span class="line">        d.moveTo(50,50);</span><br><span class="line">        d.lineTo(100,50);</span><br><span class="line">        d.lineTo(50,100);</span><br><span class="line">        d.lineTo(100,100);</span><br><span class="line">        d.stroke();</span><br></pre></td></tr></table></figure>
+      		<p>最近在学习数据结构，对书中的相关概念有点困惑，把困惑记录在这里，也把自己的理解记录在这里</p>
+<p>今天我是粉条，嘻嘻</p>
+<p>主要的困惑是底下三点：</p>
+<ol>
+<li>什么是算法</li>
+<li>什么是算法的时间复杂度</li>
+<li>算法的时间复杂度和语句的执行次数有什么关系</li>
+</ol>
+<p><img src="/2020/03/13/imgs/divide.png" alt="img"></p>
+<p>什么是算法？</p>
+<p>书中的解释是对特定问题求解步骤的描述，这让我想到了一个很久之前的脑筋急转弯：如何把大象塞进冰箱？</p>
+<p>用伪代码表示就是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">void fun(Elephant)&#123;</span><br><span class="line">    open refrigerator&apos;s door;</span><br><span class="line">    put Elephant in it;</span><br><span class="line">    close the door;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>ps:首先要获取canvas的上下文对象。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var canvas = document.getElementById(&quot;background&quot;);</span><br><span class="line">var d = canvas.getContext(&apos;2d&apos;);</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-绘制三角形"><a href="#2-绘制三角形" class="headerlink" title="2.绘制三角形"></a>2.绘制三角形</h4><p><img src="/2019/07/09/imgs/./rt.png" alt="RT"></p>
-<p>一样是先落笔然后定点，连线。这里只画了两条线段，使用closePath()可以自动闭合图形。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//直角三角形</span><br><span class="line">        d.moveTo(400,400);</span><br><span class="line">        d.lineTo(500,300);</span><br><span class="line">        d.lineTo(500,400);</span><br><span class="line">        d.closePath()</span><br><span class="line">        d.stroke();</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-绘制矩形"><a href="#3-绘制矩形" class="headerlink" title="3.绘制矩形"></a>3.绘制矩形</h4><p>绘制矩形有好几种方法：</p>
-<h5 id="（1）连线法——用线段连接而成"><a href="#（1）连线法——用线段连接而成" class="headerlink" title="（1）连线法——用线段连接而成"></a>（1）连线法——用线段连接而成</h5><p><img src="/2019/07/09/imgs/./rectangle.png" alt="RECTANGLE"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//矩形</span><br><span class="line">        d.moveTo(400,100);</span><br><span class="line">        d.lineTo(600,100);</span><br><span class="line">        d.lineTo(600,200);</span><br><span class="line">        d.lineTo(400,200);</span><br><span class="line">        d.closePath();</span><br><span class="line">        d.stroke();</span><br></pre></td></tr></table></figure>
-
-<h5 id="（2）使用strokeRect-和fillRect-方法"><a href="#（2）使用strokeRect-和fillRect-方法" class="headerlink" title="（2）使用strokeRect()和fillRect()方法"></a>（2）使用strokeRect()和fillRect()方法</h5><p><img src="/2019/07/09/imgs/./other.png" alt="OTHER"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//使用方法画矩形</span><br><span class="line">        //矩形框框</span><br><span class="line">        d.strokeStyle = &quot;#00111e&quot;</span><br><span class="line">        d.strokeRect(700,100,100,50);</span><br><span class="line">        //填充</span><br><span class="line">        //矩形块块</span><br><span class="line">        d.fillStyle = &quot;pink&quot;</span><br><span class="line">        d.fillRect(700,200,100,50);</span><br></pre></td></tr></table></figure>
-
-<p>注意：strokeStyle属性和fillStyle属性要写在方法之前，不然不起作用的。</p>
-<h5 id="（3）使用rect-方法"><a href="#（3）使用rect-方法" class="headerlink" title="（3）使用rect()方法"></a>（3）使用rect()方法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//使用rect和stroke绘制矩形框框</span><br><span class="line">        d.rect(300,250,100,100);</span><br><span class="line">        d.strokeStyle = &quot;red&quot;;</span><br><span class="line">        d.stroke();</span><br><span class="line">//使用rect和fill绘制矩形块块</span><br><span class="line">        d.rect(400,250,100,100);</span><br><span class="line">        d.fillStyle = &quot;#00111e&quot;;</span><br><span class="line">        d.fill();</span><br></pre></td></tr></table></figure>
-
-<p>另外，使用clearRect()方法可以清除指定区域的矩形块。</p>
-<p>此外，所有的方法的参数都是（X轴坐标，Y轴坐标，矩形宽度，矩形高度）</p>
-<p>再另外说明一点，这里使用的坐标都是”W3C坐标系“而不是数学中的坐标系。</p>
+<p>当需要解决一个问题的时候，算法就如他的名字一样，就是描述计算方法。</p>
+<h4 id="算法的时间复杂度"><a href="#算法的时间复杂度" class="headerlink" title="算法的时间复杂度"></a>算法的时间复杂度</h4><p>这个我理解的并不透彻…</p>
+<p>一个算法处理的往往不是一个简单的数字，更多情况下是处理一系列大量的数据，所以需要研究算法的运行时间和数量规模n关系，时间复杂度记为：<code>T(n)=O(f(n))</code>，f(n)表示的是算法中基本运算的频度。</p>
+<p>当得到T(n)的数量级后，就可以采用数学工具来研究一个算法的时间随问题规模的增大的变化情况了。</p>
+<h4 id="算法的时间复杂度和语句的执行次数关系"><a href="#算法的时间复杂度和语句的执行次数关系" class="headerlink" title="算法的时间复杂度和语句的执行次数关系"></a>算法的时间复杂度和语句的执行次数关系</h4><p>首先，一个老师说，算法的时间复杂度和语句的执行次数不是一个东西，这点要注意。</p>
+<p>算法的时间复杂度O是数量级，不是准确的函数，计算关键代码的执行次数可以得到时间复杂度，但是并不表示，执行次数就是时间复杂度。</p>
+<p>以上就是今天的记录了。</p>
+<p>#### </p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2019/07/10/0-1-0-2/" style="float: left;">
-        ← 0.1+0.2=?
-    </a>
     
-    
-    <a class="pull-right" href="/2019/07/04/理解React生命周期/">
-        理解React生命周期 →
+    <a class="pull-right" href="/2019/12/14/what-is-redux/">
+        what is redux? →
     </a>
     
 </nav>
