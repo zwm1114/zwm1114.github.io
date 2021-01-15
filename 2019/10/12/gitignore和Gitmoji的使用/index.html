@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2020/3 | 一颗土豆子</title>
+  <title>gitignore和Gitmoji的使用 | 一颗土豆子</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -61,7 +61,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -82,11 +82,7 @@
         		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
             	<ul class="sb-submenu">
 				  	
-				    <li><a href="/categories/web前端/" class="animsition-link">web前端<small>(9)</small></a></li>
-				    
-				    <li><a href="/categories/数据结构/" class="animsition-link">数据结构<small>(1)</small></a></li>
-				    
-				    <li><a href="/categories/随笔/" class="animsition-link">随笔<small>(0)</small></a></li>
+				    <li><a href="/categories/常用技能/" class="animsition-link">常用技能<small>(2)</small></a></li>
 				    
 				</ul>
         	</li>
@@ -152,69 +148,104 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2></h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>一个没有感情的饭桶</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/2020/03/13/关于算法的一些理解/">关于算法的一些理解</a></h4>
-                            
-                            <p><time datetime="2020-03-13T09:00:19.000Z"><a href="/2020/03/13/关于算法的一些理解/">2020-03-13</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-10-12T11:52:56.000Z" itemprop="datePublished">
+          2019-10-12
+      </time>
+    
+    
+    | 
+    <a href='/tags/git/'>git</a>
+    
+    
+</span>
+                <h1>gitignore和Gitmoji的使用</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="gitignore和Gitmoji的使用"><a href="#gitignore和Gitmoji的使用" class="headerlink" title=".gitignore和Gitmoji的使用"></a>.gitignore和Gitmoji的使用</h3><p><a href="https://www.liaoxuefeng.com/wiki/896043488029600/900004590234208" target="_blank" rel="noopener">廖雪峰老师的git教程</a></p>
+<h4 id="gitignore实践"><a href="#gitignore实践" class="headerlink" title=".gitignore实践"></a>.gitignore实践</h4><p>例如现在在这个文件目录中想提交所有的类型名为.c的文件，.exe的文件不提交。</p>
+<h5 id="1-创建-gitignore文件"><a href="#1-创建-gitignore文件" class="headerlink" title="1.创建.gitignore文件"></a>1.创建.gitignore文件</h5><p>方法：在目标文件的根目录下新建一个文本文档，文件夹命名时输入 <code>.gitignore.</code>，注意后面有个点。</p>
+<h5 id="2-添加需要忽略上传的文件"><a href="#2-添加需要忽略上传的文件" class="headerlink" title="2.添加需要忽略上传的文件"></a>2.添加需要忽略上传的文件</h5><p>打开.gitignore文件，进行编辑，添加要忽略上传的文件或文件夹，例如这里需要忽略test文件夹和.exe文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">*.exe</span><br><span class="line">test</span><br></pre></td></tr></table></figure>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p></p>
+<p>这里.exe和test文件就被忽略了，也不会提交到仓库里了。</p>
+<h4 id="Gitmoji的使用"><a href="#Gitmoji的使用" class="headerlink" title="Gitmoji的使用"></a>Gitmoji的使用</h4><p>例如：<code>git commit -m &quot;:bug:just a test!&quot;</code></p>
+<p><img src="/2019/imgs/./1610701526722.png" alt="1610701526722"></p>
+<p><a href="https://gitmoji.carloscuesta.me/" target="_blank" rel="noopener">Emoji在这里</a></p>
+<p>以后每次提交代码都是一种乐趣了~</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2019/07/13/git笔记整理/">
+        廖雪峰Git教程笔记整理 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
