@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>gitignore和Gitmoji的使用 | 一颗土豆子</title>
+  <title>求最大公约数和最小公倍数 | 一颗土豆子</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -158,8 +158,8 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2019-10-12T11:52:56.000Z" itemprop="datePublished">
-          2019-10-12
+      <time datetime="2019-07-13T04:18:03.000Z" itemprop="datePublished">
+          2019-07-13
       </time>
     
     
@@ -168,29 +168,33 @@
     
     
 </span>
-                <h1>gitignore和Gitmoji的使用</h1>
+                <h1>求最大公约数和最小公倍数</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h3 id="gitignore和Gitmoji的使用"><a href="#gitignore和Gitmoji的使用" class="headerlink" title=".gitignore和Gitmoji的使用"></a>.gitignore和Gitmoji的使用</h3><p><a href="https://www.liaoxuefeng.com/wiki/896043488029600/900004590234208" target="_blank" rel="noopener">廖雪峰老师的git教程</a></p>
-<h4 id="gitignore实践"><a href="#gitignore实践" class="headerlink" title=".gitignore实践"></a>.gitignore实践</h4><p>例如现在在这个文件目录中想提交所有的类型名为.c的文件，.exe的文件不提交。</p>
-<h5 id="1-创建-gitignore文件"><a href="#1-创建-gitignore文件" class="headerlink" title="1.创建.gitignore文件"></a>1.创建.gitignore文件</h5><p>方法：在目标文件的根目录下新建一个文本文档，文件夹命名时输入 <code>.gitignore.</code>，注意后面有个点。</p>
-<h5 id="2-添加需要忽略上传的文件"><a href="#2-添加需要忽略上传的文件" class="headerlink" title="2.添加需要忽略上传的文件"></a>2.添加需要忽略上传的文件</h5><p>打开.gitignore文件，进行编辑，添加要忽略上传的文件或文件夹，例如这里需要忽略test文件夹和.exe文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">*.exe</span><br><span class="line">test</span><br></pre></td></tr></table></figure>
+      		<h3 id="求最大公约数和最小公倍数"><a href="#求最大公约数和最小公倍数" class="headerlink" title="求最大公约数和最小公倍数"></a>求最大公约数和最小公倍数</h3><p>输入两个正整数m和n，求其最大公约数和最小公倍数</p>
+<p>最大公约数：只两个或多个整数公有约数中最大的一个</p>
+<p>最小公倍数：两个或多个整数公有的倍数叫做他们的公倍数，其中除0以外最小的一个倍数就叫做这几个整数的最小公倍数</p>
+<p>最大公约数和最小公倍数的关系：最小公倍数 = 两个数的乘积 / 最大公约数</p>
+<p>ps:暂不考虑0的情况</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">commonDivisor</span><span class="params">(<span class="keyword">int</span>,<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/1 14:40:29</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">commonDivisor</span><span class="params">(<span class="keyword">int</span> m,<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> bigger = m &gt; n?m:n;</span><br><span class="line">	<span class="keyword">int</span> smaller = m &lt; n?m:n;</span><br><span class="line">	<span class="keyword">int</span> i,commonDivisor = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span>(bigger % smaller == <span class="number">0</span>)&#123;</span><br><span class="line">		<span class="keyword">return</span> smaller;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; smaller; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(smaller % i == <span class="number">0</span> &amp;&amp; bigger % i== <span class="number">0</span> &amp;&amp; commonDivisor &lt; i)&#123;</span><br><span class="line">			commonDivisor = i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> commonDivisor;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> m,n;</span><br><span class="line">	<span class="keyword">int</span> comDivisor;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"input two numbers:"</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;m,&amp;n);</span><br><span class="line">	comDivisor = commonDivisor(m,n);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"common divisor is: %d\n"</span>,comDivisor);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"common multiple is: %d\n"</span>,(m*n)/comDivisor);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>这里.exe和test文件就被忽略了，也不会提交到仓库里了。</p>
-<h4 id="Gitmoji的使用"><a href="#Gitmoji的使用" class="headerlink" title="Gitmoji的使用"></a>Gitmoji的使用</h4><p>例如：<code>git commit -m &quot;:bug:just a test!&quot;</code></p>
-<p><a href="https://gitmoji.carloscuesta.me/" target="_blank" rel="noopener">Emoji在这里</a></p>
-<p>以后每次提交代码都是一种乐趣了~</p>
+<p>上述方法，求最大公约数是用一个for循环找到两个数的公约数，最大者即为最大公约数，下面的方法是用辗转相除法求最大公约数</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">commonDivisor</span><span class="params">(<span class="keyword">int</span> m,<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> temp;</span><br><span class="line">    <span class="comment">//m始终是较大的数</span></span><br><span class="line">	<span class="keyword">if</span>(m &lt; n)&#123;</span><br><span class="line">		temp = m;</span><br><span class="line">		m = n;</span><br><span class="line">		n = temp;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//辗转相除法</span></span><br><span class="line">	<span class="keyword">while</span>(n != <span class="number">0</span>)&#123;</span><br><span class="line">		temp = m % n;</span><br><span class="line">		m = n;</span><br><span class="line">		n = temp;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> m;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
+    <a class="pull-left" href="/2019/07/13/求素数问题/" style="float: left;">
+        ← 求素数问题
+    </a>
     
-    <a class="pull-right" href="/2019/07/13/git笔记整理/">
-        廖雪峰Git教程笔记整理 →
+    
+    <a class="pull-right" href="/2019/07/13/三个数从小到大顺序输出/">
+        三个数从小到大顺序输出 →
     </a>
     
 </nav>
