@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>猴子吃桃问题 | 一颗土豆子</title>
+  <title>static用法 | 一颗土豆子</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -158,8 +158,8 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2019-07-13T04:18:03.000Z" itemprop="datePublished">
-          2019-07-13
+      <time datetime="2021-03-02T07:05:04.000Z" itemprop="datePublished">
+          2021-03-02
       </time>
     
     
@@ -168,12 +168,16 @@
     
     
 </span>
-                <h1>猴子吃桃问题</h1>
+                <h1>static用法</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h3 id="猴子吃桃问题"><a href="#猴子吃桃问题" class="headerlink" title="猴子吃桃问题"></a>猴子吃桃问题</h3><p>猴子吃桃问题：猴子第一天吃了若干个桃子，当即吃了一半，还不解馋，又多吃了一个； 第二天，吃剩下的桃子的一半，还不过瘾，又多吃了一个；以后每天都吃前一天剩下的一半多一个，到第10天想再吃时，只剩下一个桃子了。问第一天共吃了多少个桃子？</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> left = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(i; i &lt; <span class="number">10</span>;i++)&#123;</span><br><span class="line">		left = <span class="number">2</span>*(left + <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"the first day ate %d peaches\n"</span>,left/<span class="number">2</span> + <span class="number">1</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      		<h3 id="static用法"><a href="#static用法" class="headerlink" title="static用法"></a>static用法</h3><p>学习static关键字定义静态变量的方法</p>
+<p>普通变量和静态变量有什么区别？下列程序可以说明：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">staticFun</span><span class="params">()</span></span>;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/2 16:41:00</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; <span class="number">3</span>;i++)&#123;</span><br><span class="line">		staticFun();</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">staticFun</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> val = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">static</span> <span class="keyword">int</span> val_static = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"val: %d\n"</span>,val);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"val_static: %d\n"</span>,val_static);</span><br><span class="line">	val++;</span><br><span class="line">	val_static++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">val: 0</span><br><span class="line">val_static: 0</span><br><span class="line">val: 0</span><br><span class="line">val_static: 1</span><br><span class="line">val: 0</span><br><span class="line">val_static: 2</span><br></pre></td></tr></table></figure>
 
 
             <div class="clearfix"></div>
@@ -181,13 +185,9 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2019/07/13/求素数问题/" style="float: left;">
-        ← 求素数问题
-    </a>
     
-    
-    <a class="pull-right" href="/2019/07/13/矩阵对角元素之和/">
-        矩阵对角线元素之和 →
+    <a class="pull-right" href="/2019/10/12/gitignore和Gitmoji的使用/">
+        gitignore和Gitmoji的使用 →
     </a>
     
 </nav>
