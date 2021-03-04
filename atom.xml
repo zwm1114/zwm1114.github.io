@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-03-02T08:52:43.761Z</updated>
+  <updated>2021-03-04T07:11:23.193Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,328 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>求字符串反转</title>
+    <link href="http://yoursite.com/2021/03/04/%E6%B1%82%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%8F%8D%E8%BD%AC/"/>
+    <id>http://yoursite.com/2021/03/04/%E6%B1%82%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%8F%8D%E8%BD%AC/</id>
+    <published>2021-03-04T06:40:50.000Z</published>
+    <updated>2021-03-04T07:11:23.193Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="求字符串反转"><a href="#求字符串反转" class="headerlink" title="求字符串反转"></a>求字符串反转</h3><p>求字符串的反转，如将原字符串“abc”反转为“cba”</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> MAXSIZE = <span class="number">100</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">char</span> *,<span class="keyword">char</span> *)</span></span>;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/4 14:44:10</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">char</span> str[MAXSIZE];</span><br><span class="line"><span class="keyword">int</span> i,j;</span><br><span class="line"><span class="keyword">int</span> len;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"input a string: "</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%s"</span>,str);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"original: %s\n"</span>,str);</span><br><span class="line"></span><br><span class="line">len = <span class="built_in">strlen</span>(str);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>,j = len<span class="number">-1</span>;i &lt;= j;i ++,j --)&#123;</span><br><span class="line">swap(&amp;str[i],&amp;str[j]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"last: %s\n"</span>,str);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">char</span> *a,<span class="keyword">char</span> *b)</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> temp;</span><br><span class="line">temp = *a;</span><br><span class="line">*a = *b;</span><br><span class="line">*b = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;求字符串反转&quot;&gt;&lt;a href=&quot;#求字符串反转&quot; class=&quot;headerlink&quot; title=&quot;求字符串反转&quot;&gt;&lt;/a&gt;求字符串反转&lt;/h3&gt;&lt;p&gt;求字符串的反转，如将原字符串“abc”反转为“cba”&lt;/p&gt;
+&lt;figure class=&quot;highlig</summary>
+      
+    
+    
+    
+    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
+    
+    
+    <category term="C" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>求回文数</title>
+    <link href="http://yoursite.com/2021/03/04/%E6%B1%82%E5%9B%9E%E6%96%87%E6%95%B0/"/>
+    <id>http://yoursite.com/2021/03/04/%E6%B1%82%E5%9B%9E%E6%96%87%E6%95%B0/</id>
+    <published>2021-03-04T06:10:50.000Z</published>
+    <updated>2021-03-04T07:12:56.201Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="求回文数"><a href="#求回文数" class="headerlink" title="求回文数"></a>求回文数</h3><p>一个5位数字，判断是不是回文数，例如：12321是回文数</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/4 14:12:47</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> num,n;</span><br><span class="line"><span class="keyword">int</span> mul = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> i,j,k;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"input number and how many numbers it contains: "</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;num,&amp;n);</span><br><span class="line"><span class="keyword">int</span> arr[n];</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">1</span>;i &lt; n;i ++)&#123;</span><br><span class="line">mul *= <span class="number">10</span>;</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; n;i ++)&#123;</span><br><span class="line">k = num/mul;</span><br><span class="line">num = num%mul;</span><br><span class="line">mul = mul/<span class="number">10</span>;</span><br><span class="line">arr[i] = k;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>,j = n<span class="number">-1</span>;i &lt;= j;i++,j--)&#123;</span><br><span class="line"><span class="keyword">if</span>(arr[i] != arr[j])&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"not plalindrome!"</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"plalindrome!"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>注意最后一个for循环中，一开始的判断停止的条件是 <code>i!= j</code> 最后测试发现了下标溢出，要多考虑边界情况。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;求回文数&quot;&gt;&lt;a href=&quot;#求回文数&quot; class=&quot;headerlink&quot; title=&quot;求回文数&quot;&gt;&lt;/a&gt;求回文数&lt;/h3&gt;&lt;p&gt;一个5位数字，判断是不是回文数，例如：12321是回文数&lt;/p&gt;
+&lt;figure class=&quot;highlight c&quot;&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
+    
+    
+    <category term="C" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>正整数反向输出</title>
+    <link href="http://yoursite.com/2021/03/04/%E6%AD%A3%E6%95%B4%E6%95%B0%E5%8F%8D%E5%90%91%E8%BE%93%E5%87%BA/"/>
+    <id>http://yoursite.com/2021/03/04/%E6%AD%A3%E6%95%B4%E6%95%B0%E5%8F%8D%E5%90%91%E8%BE%93%E5%87%BA/</id>
+    <published>2021-03-04T03:47:34.000Z</published>
+    <updated>2021-03-04T03:43:13.460Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="正整数反向输出"><a href="#正整数反向输出" class="headerlink" title="正整数反向输出"></a>正整数反向输出</h3><p>求正整数，反向输出各位数字</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/4 11:36:38</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> num;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"input: "</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;num);</span><br><span class="line"><span class="keyword">while</span>(num)&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d "</span>,num%<span class="number">10</span>);</span><br><span class="line">num = num/<span class="number">10</span>;</span><br><span class="line">&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;正整数反向输出&quot;&gt;&lt;a href=&quot;#正整数反向输出&quot; class=&quot;headerlink&quot; title=&quot;正整数反向输出&quot;&gt;&lt;/a&gt;正整数反向输出&lt;/h3&gt;&lt;p&gt;求正整数，反向输出各位数字&lt;/p&gt;
+&lt;figure class=&quot;highlight c&quot;&gt;&lt;tab</summary>
+      
+    
+    
+    
+    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
+    
+    
+    <category term="C" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>递归求年龄</title>
+    <link href="http://yoursite.com/2021/03/04/%E9%80%92%E5%BD%92%E6%B1%82%E5%B9%B4%E9%BE%84/"/>
+    <id>http://yoursite.com/2021/03/04/%E9%80%92%E5%BD%92%E6%B1%82%E5%B9%B4%E9%BE%84/</id>
+    <published>2021-03-04T03:37:34.000Z</published>
+    <updated>2021-03-04T03:34:52.001Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="递归求年龄"><a href="#递归求年龄" class="headerlink" title="递归求年龄"></a>递归求年龄</h3><p>有五个人坐在一起，问第五个人多少岁，他说比第四个人大两岁，问第四个人的岁数，他说比第三个人大两岁，问第三个人的岁数，他说比第二个人大两岁，，问第二个人的岁数，他说比第一个人大2岁。最后问第一个人，她说是20岁。问第五个人多少岁？</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">factorial</span><span class="params">(<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/4 11:28:11</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> n = <span class="number">5</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"the fifth guy's age is : %d\n"</span>,factorial(n));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">factorial</span><span class="params">(<span class="keyword">int</span> T)</span></span>&#123;</span><br><span class="line"><span class="keyword">if</span>(T == <span class="number">1</span>)&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">20</span>;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">2</span>+factorial(T<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;递归求年龄&quot;&gt;&lt;a href=&quot;#递归求年龄&quot; class=&quot;headerlink&quot; title=&quot;递归求年龄&quot;&gt;&lt;/a&gt;递归求年龄&lt;/h3&gt;&lt;p&gt;有五个人坐在一起，问第五个人多少岁，他说比第四个人大两岁，问第四个人的岁数，他说比第三个人大两岁，问第三个人的岁数，</summary>
+      
+    
+    
+    
+    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
+    
+    
+    <category term="C" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>求学生成绩等级</title>
+    <link href="http://yoursite.com/2021/03/04/%E6%B1%82%E5%AD%A6%E7%94%9F%E6%88%90%E7%BB%A9%E7%AD%89%E7%BA%A7/"/>
+    <id>http://yoursite.com/2021/03/04/%E6%B1%82%E5%AD%A6%E7%94%9F%E6%88%90%E7%BB%A9%E7%AD%89%E7%BA%A7/</id>
+    <published>2021-03-04T00:37:34.000Z</published>
+    <updated>2021-03-04T02:39:04.178Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="求学生成绩等级"><a href="#求学生成绩等级" class="headerlink" title="求学生成绩等级"></a>求学生成绩等级</h3><p>利用条件运算符的嵌套来完成此题。</p><p>学生成绩&gt;=90分的同学用“优秀”表示，60-89分之间用“合格”表示，60分以下用“不合格”表示</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt; </span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/4 9:24:36</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">float</span> score = <span class="number">0.0</span>;</span><br><span class="line"><span class="keyword">char</span> rank[<span class="number">5</span>];</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"input score: "</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%f"</span>,&amp;score);</span><br><span class="line"><span class="built_in">strcpy</span>(rank,score &gt;= <span class="number">90</span>?<span class="string">"优秀"</span>:score &gt;= <span class="number">60</span>? <span class="string">"合格"</span>:<span class="string">"不合格"</span>);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"the rank is : %s\n"</span>,rank);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;求学生成绩等级&quot;&gt;&lt;a href=&quot;#求学生成绩等级&quot; class=&quot;headerlink&quot; title=&quot;求学生成绩等级&quot;&gt;&lt;/a&gt;求学生成绩等级&lt;/h3&gt;&lt;p&gt;利用条件运算符的嵌套来完成此题。&lt;/p&gt;
+&lt;p&gt;学生成绩&amp;gt;=90分的同学用“优秀”表示，60-</summary>
+      
+    
+    
+    
+    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
+    
+    
+    <category term="C" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>递归求阶乘</title>
+    <link href="http://yoursite.com/2021/03/04/%E9%80%92%E5%BD%92%E6%B1%82%E9%98%B6%E4%B9%98/"/>
+    <id>http://yoursite.com/2021/03/04/%E9%80%92%E5%BD%92%E6%B1%82%E9%98%B6%E4%B9%98/</id>
+    <published>2021-03-04T00:37:34.000Z</published>
+    <updated>2021-03-04T03:27:00.125Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="递归求阶乘"><a href="#递归求阶乘" class="headerlink" title="递归求阶乘"></a>递归求阶乘</h3><p>利用递归方法求5！</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">factorial</span><span class="params">(<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/4 11:20:15</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"input number:"</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d! = %d \n"</span>,n,factorial(n));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">factorial</span><span class="params">(<span class="keyword">int</span> T)</span></span>&#123;</span><br><span class="line"><span class="keyword">if</span>(T == <span class="number">1</span>)&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">return</span> T*factorial(T<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;递归求阶乘&quot;&gt;&lt;a href=&quot;#递归求阶乘&quot; class=&quot;headerlink&quot; title=&quot;递归求阶乘&quot;&gt;&lt;/a&gt;递归求阶乘&lt;/h3&gt;&lt;p&gt;利用递归方法求5！&lt;/p&gt;
+&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td c</summary>
+      
+    
+    
+    
+    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
+    
+    
+    <category term="C" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>求企业奖金根据利润提出(switch盲点)</title>
+    <link href="http://yoursite.com/2021/03/04/%E6%B1%82%E4%BC%81%E4%B8%9A%E5%A5%96%E9%87%91%E6%A0%B9%E6%8D%AE%E5%88%A9%E6%B6%A6%E6%8F%90%E5%87%BA/"/>
+    <id>http://yoursite.com/2021/03/04/%E6%B1%82%E4%BC%81%E4%B8%9A%E5%A5%96%E9%87%91%E6%A0%B9%E6%8D%AE%E5%88%A9%E6%B6%A6%E6%8F%90%E5%87%BA/</id>
+    <published>2021-03-04T00:37:34.000Z</published>
+    <updated>2021-03-04T03:18:16.214Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="求企业奖金根据利润提出"><a href="#求企业奖金根据利润提出" class="headerlink" title="求企业奖金根据利润提出"></a>求企业奖金根据利润提出</h3><p>企业发放的奖金根据利润提成。</p><ol><li><p>利润低于或等于10万元时，奖金可提10%</p></li><li><p>利润高于10万元，低于20万元时，低于10万元的部分按照10%提成，高于10万元的部分，可提成7.5%</p></li><li><p>20万到40万之间，高于20万元的部分，可提成5%</p></li><li><p>40万到60万之间时高于40万元的部分，可提成3%</p></li><li><p>60万到100万之间，高于60万元的部分，可提成1.5%</p></li><li><p>高于100万元时，超过100万元的部分按1%提成</p></li></ol><p>从键盘输入当月利润，求应发放奖金总数？</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/4 10:17:19</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">float</span> i;</span><br><span class="line"><span class="keyword">float</span> bouns = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">float</span> b1,b2,b3,b4,b5;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"input benefit: "</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%f"</span>,&amp;i);</span><br><span class="line"></span><br><span class="line">b1 = <span class="number">10</span> * <span class="number">0.1</span>; <span class="comment">//10</span></span><br><span class="line">b2 = b1 + <span class="number">10</span> * <span class="number">0.075</span>;<span class="comment">//10-20</span></span><br><span class="line">b3 = b2 + <span class="number">20</span> * <span class="number">0.05</span>;<span class="comment">//20-40</span></span><br><span class="line">b4 = b3 + <span class="number">20</span> * <span class="number">0.03</span>;<span class="comment">//40-60</span></span><br><span class="line">b5 = b4 + <span class="number">40</span> * <span class="number">0.015</span>;<span class="comment">//60-100</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(i &lt;= <span class="number">10</span>)&#123;</span><br><span class="line">bouns = i * <span class="number">0.1</span>;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(i &lt;= <span class="number">20</span>)&#123;</span><br><span class="line">bouns = b1 + (i<span class="number">-10</span>) * <span class="number">0.075</span>;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(i &lt;= <span class="number">40</span>)&#123;</span><br><span class="line">bouns = b2 + (i<span class="number">-20</span>) * <span class="number">0.05</span>;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(i &lt;= <span class="number">60</span>)&#123;</span><br><span class="line">bouns = b3 + (i<span class="number">-40</span>) * <span class="number">0.03</span>;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(i &lt;= <span class="number">100</span>)&#123;</span><br><span class="line">bouns = b4 + (i<span class="number">-60</span>) * <span class="number">0.015</span>;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">bouns = b5 + (i<span class="number">-100</span>) * <span class="number">0.01</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"the bouns is : %.6f w\n"</span>,bouns);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>尝试使用 <code>switch case</code>解决，问题没解决，却发现了一个盲点，switch中的表达式结果必须是一个整型，所以当把利润声明为浮点型就会报错 <code>[Error] switch quantity not an integer</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;求企业奖金根据利润提出&quot;&gt;&lt;a href=&quot;#求企业奖金根据利润提出&quot; class=&quot;headerlink&quot; title=&quot;求企业奖金根据利润提出&quot;&gt;&lt;/a&gt;求企业奖金根据利润提出&lt;/h3&gt;&lt;p&gt;企业发放的奖金根据利润提成。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;利润低</summary>
+      
+    
+    
+    
+    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
+    
+    
+    <category term="C" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打印出菱形图案</title>
+    <link href="http://yoursite.com/2021/03/03/%E6%89%93%E5%8D%B0%E5%87%BA%E8%8F%B1%E5%BD%A2%E5%9B%BE%E6%A1%88/"/>
+    <id>http://yoursite.com/2021/03/03/%E6%89%93%E5%8D%B0%E5%87%BA%E8%8F%B1%E5%BD%A2%E5%9B%BE%E6%A1%88/</id>
+    <published>2021-03-03T03:45:00.000Z</published>
+    <updated>2021-03-03T07:23:46.228Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="打印出菱形图案"><a href="#打印出菱形图案" class="headerlink" title="打印出菱形图案"></a>打印出菱形图案</h3><p>打印效果如图：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">*</span><br><span class="line">  ***</span><br><span class="line"> *****</span><br><span class="line">*******</span><br><span class="line"> *****</span><br><span class="line">  ***</span><br><span class="line">   *</span><br></pre></td></tr></table></figure><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/3 14:37:10</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> i,j,n = <span class="number">4</span>;</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">1</span>;i &lt;= n;i++)&#123;</span><br><span class="line"><span class="keyword">for</span>(j = <span class="number">0</span>;j &lt; (n-i);j++)&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(j = <span class="number">0</span>;j &lt; (<span class="number">2</span>*i - <span class="number">1</span>);j++)&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"*"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">1</span>;i &lt; n;i++)&#123;</span><br><span class="line"><span class="keyword">for</span>(j = <span class="number">0</span>;j &lt; i;j++)&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(j = <span class="number">0</span>;j &lt; (<span class="number">2</span>*(n-i)<span class="number">-1</span>);j++)&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"*"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>空格和星号是分开打印的，上半部分和下半部分也是分开打印的</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;打印出菱形图案&quot;&gt;&lt;a href=&quot;#打印出菱形图案&quot; class=&quot;headerlink&quot; title=&quot;打印出菱形图案&quot;&gt;&lt;/a&gt;打印出菱形图案&lt;/h3&gt;&lt;p&gt;打印效果如图：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table</summary>
+      
+    
+    
+    
+    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
+    
+    
+    <category term="C" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>判断这一天是该年中的第几天</title>
+    <link href="http://yoursite.com/2021/03/03/%E5%88%A4%E6%96%AD%E8%BF%99%E4%B8%80%E5%A4%A9%E6%98%AF%E8%AF%A5%E5%B9%B4%E4%B8%AD%E7%9A%84%E7%AC%AC%E5%87%A0%E5%A4%A9/"/>
+    <id>http://yoursite.com/2021/03/03/%E5%88%A4%E6%96%AD%E8%BF%99%E4%B8%80%E5%A4%A9%E6%98%AF%E8%AF%A5%E5%B9%B4%E4%B8%AD%E7%9A%84%E7%AC%AC%E5%87%A0%E5%A4%A9/</id>
+    <published>2021-03-03T03:45:00.000Z</published>
+    <updated>2021-03-03T06:35:24.528Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="判断这一天是该年中的第几天"><a href="#判断这一天是该年中的第几天" class="headerlink" title="判断这一天是该年中的第几天"></a>判断这一天是该年中的第几天</h3><p>输入某年某月某日，判断这一天是这一年的第几天？</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/3 11:55:46</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> mon[<span class="number">13</span>] = &#123;<span class="number">0</span>,<span class="number">31</span>,<span class="number">28</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> one = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> year,month,day;</span><br><span class="line"><span class="keyword">int</span> i;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"input like \"1974-3-8\" :"</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d-%d-%d"</span>,&amp;year,&amp;month,&amp;day);</span><br><span class="line"><span class="keyword">if</span>(year % <span class="number">4</span> == <span class="number">0</span> &amp;&amp; year % <span class="number">100</span> != <span class="number">0</span> || year % <span class="number">400</span> == <span class="number">0</span>)&#123;</span><br><span class="line">mon[<span class="number">2</span>] = <span class="number">29</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">1</span>;i &lt; month;i ++)&#123;</span><br><span class="line">one += mon[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"this is the %d day of a year.\n"</span>,one+day);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;判断这一天是该年中的第几天&quot;&gt;&lt;a href=&quot;#判断这一天是该年中的第几天&quot; class=&quot;headerlink&quot; title=&quot;判断这一天是该年中的第几天&quot;&gt;&lt;/a&gt;判断这一天是该年中的第几天&lt;/h3&gt;&lt;p&gt;输入某年某月某日，判断这一天是这一年的第几天？&lt;/p</summary>
+      
+    
+    
+    
+    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
+    
+    
+    <category term="C" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>分数序列各项求和</title>
+    <link href="http://yoursite.com/2021/03/03/%E5%88%86%E6%95%B0%E5%BA%8F%E5%88%97%E5%90%84%E9%A1%B9%E6%B1%82%E5%92%8C/"/>
+    <id>http://yoursite.com/2021/03/03/%E5%88%86%E6%95%B0%E5%BA%8F%E5%88%97%E5%90%84%E9%A1%B9%E6%B1%82%E5%92%8C/</id>
+    <published>2021-03-03T03:45:00.000Z</published>
+    <updated>2021-03-03T07:50:36.725Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="分数序列各项求和"><a href="#分数序列各项求和" class="headerlink" title="分数序列各项求和"></a>分数序列各项求和</h3><p>有一分数序列：2/1、3/2、5/3、8/5、13/8、21/13……求出这个数列的前20项之和</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">double</span> f1 = <span class="number">1.0</span>,f2 = <span class="number">2.0</span>,temp;</span><br><span class="line"><span class="keyword">double</span> sum = <span class="number">0.0</span>;</span><br><span class="line"><span class="keyword">int</span> i;</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; <span class="number">20</span>;i++)&#123;</span><br><span class="line">sum += f2/f1;</span><br><span class="line">temp = f2;</span><br><span class="line">f2 = f1+f2;</span><br><span class="line">f1 = temp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"the sum is %.2f"</span>,sum); </span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>注意这里的f1和f2声明为double型，若是声明为int型，会存在精度丢失的问题，另外，循环次数也应该注意，不确定循环次数的时候可将数改小，然后验证。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;分数序列各项求和&quot;&gt;&lt;a href=&quot;#分数序列各项求和&quot; class=&quot;headerlink&quot; title=&quot;分数序列各项求和&quot;&gt;&lt;/a&gt;分数序列各项求和&lt;/h3&gt;&lt;p&gt;有一分数序列：2/1、3/2、5/3、8/5、13/8、21/13……求出这个数列的前20项</summary>
+      
+    
+    
+    
+    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
+    
+    
+    <category term="C" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>求同数多项之和</title>
+    <link href="http://yoursite.com/2021/03/03/%E6%B1%82%E5%90%8C%E6%95%B0%E5%A4%9A%E9%A1%B9%E4%B9%8B%E5%92%8C/"/>
+    <id>http://yoursite.com/2021/03/03/%E6%B1%82%E5%90%8C%E6%95%B0%E5%A4%9A%E9%A1%B9%E4%B9%8B%E5%92%8C/</id>
+    <published>2021-03-03T03:45:00.000Z</published>
+    <updated>2021-03-04T01:11:24.530Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="求同数多项之和"><a href="#求同数多项之和" class="headerlink" title="求同数多项之和"></a>求同数多项之和</h3><p>求s=a+aa+aaa+…+aaa…a的值，其中a是一个数字，例如：2+22+222+2222+22222（此时共有5个数相加），几个数相加有键盘控制。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/3 16:04:25</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> a,n;</span><br><span class="line"><span class="keyword">int</span> i,j; </span><br><span class="line"><span class="keyword">int</span> mul = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"input number:"</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a);</span><br><span class="line"><span class="keyword">int</span> val = a;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"input cycle number:"</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; n;i++)&#123;</span><br><span class="line">sum += val;</span><br><span class="line">mul *= <span class="number">10</span>;</span><br><span class="line">val += (a*mul);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"the result is : %d"</span>,sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>注意，下一个数的结果可以用上一个数的结果，和之前的“求累积项之和”有点相似。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;求同数多项之和&quot;&gt;&lt;a href=&quot;#求同数多项之和&quot; class=&quot;headerlink&quot; title=&quot;求同数多项之和&quot;&gt;&lt;/a&gt;求同数多项之和&lt;/h3&gt;&lt;p&gt;求s=a+aa+aaa+…+aaa…a的值，其中a是一个数字，例如：2+22+222+2222+22</summary>
+      
+    
+    
+    
+    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
+    
+    
+    <category term="C" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>输出国际象棋棋盘</title>
+    <link href="http://yoursite.com/2021/03/02/%E8%BE%93%E5%87%BA%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B%E6%A3%8B%E7%9B%98/"/>
+    <id>http://yoursite.com/2021/03/02/%E8%BE%93%E5%87%BA%E5%9B%BD%E9%99%85%E8%B1%A1%E6%A3%8B%E6%A3%8B%E7%9B%98/</id>
+    <published>2021-03-02T07:05:04.000Z</published>
+    <updated>2021-03-02T08:54:11.374Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="输出国际象棋棋盘"><a href="#输出国际象棋棋盘" class="headerlink" title="输出国际象棋棋盘"></a>输出国际象棋棋盘</h3><p>要求输出国际象棋棋盘（即8行8列，黑白相间）</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/2 15:44:06</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> i,j;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"checkerboard\n"</span>);</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; <span class="number">8</span>;i++)&#123;</span><br><span class="line"><span class="keyword">for</span>(j = <span class="number">0</span>;j &lt; <span class="number">8</span>;j++)&#123;</span><br><span class="line"><span class="keyword">if</span>(i % <span class="number">2</span> == <span class="number">0</span>)&#123;</span><br><span class="line"><span class="keyword">if</span>(j % <span class="number">2</span> == <span class="number">0</span>)&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"□"</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"■"</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">if</span>(j % <span class="number">2</span> == <span class="number">0</span>)&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"■"</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"□"</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>上述方法用 i 进行第一重判断：先打印黑方块还是先打印白方块，用 j 实现黑白方块交替打印，更为简便的方法是用 i 和 j 的和进行判断，注意到 i + j 的和若是奇数就打印黑方块，若是偶数就打印白方块，改进之后的 if 判断：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>((i+j)%<span class="number">2</span> == <span class="number">0</span>)&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"□"</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"■"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;输出国际象棋棋盘&quot;&gt;&lt;a href=&quot;#输出国际象棋棋盘&quot; class=&quot;headerlink&quot; title=&quot;输出国际象棋棋盘&quot;&gt;&lt;/a&gt;输出国际象棋棋盘&lt;/h3&gt;&lt;p&gt;要求输出国际象棋棋盘（即8行8列，黑白相间）&lt;/p&gt;
+&lt;figure class=&quot;high</summary>
+      
+    
+    
+    
+    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
+    
+    
+    <category term="C" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>累积项之和</title>
+    <link href="http://yoursite.com/2021/03/02/%E7%B4%AF%E7%A7%AF%E9%A1%B9%E4%B9%8B%E5%92%8C/"/>
+    <id>http://yoursite.com/2021/03/02/%E7%B4%AF%E7%A7%AF%E9%A1%B9%E4%B9%8B%E5%92%8C/</id>
+    <published>2021-03-02T07:05:04.000Z</published>
+    <updated>2021-03-02T08:54:42.388Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="累积项之和"><a href="#累积项之和" class="headerlink" title="累积项之和"></a>累积项之和</h3><p>求1!+2!+3!+…+n!的和。（备注：如果要求10项，循环条件更改为10，以此类推）</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/2 15:10:52</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> sum = <span class="number">0</span>,tSum;</span><br><span class="line"><span class="keyword">int</span> n,i,j;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"input:"</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">1</span>;i &lt;= n;i++)&#123;</span><br><span class="line">tSum = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span>(j = i; j &gt; <span class="number">0</span>;j--)&#123;</span><br><span class="line">tSum *= j;</span><br><span class="line">&#125;</span><br><span class="line">sum += tSum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"1!+2!+...+%d! = %d\n"</span>,n,sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>上述方法用了两层循环，每一个累积都从1开始计算的，做了重复的工作，比如：3! = 3 *2 *1 = 2! *3，所以可以用上一个的累积结果求出下一个累积的结果，改进之后的for循环：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i = <span class="number">1</span>;i &lt;= n;i++)&#123;</span><br><span class="line">t *= i;</span><br><span class="line">sum += t;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;累积项之和&quot;&gt;&lt;a href=&quot;#累积项之和&quot; class=&quot;headerlink&quot; title=&quot;累积项之和&quot;&gt;&lt;/a&gt;累积项之和&lt;/h3&gt;&lt;p&gt;求1!+2!+3!+…+n!的和。（备注：如果要求10项，循环条件更改为10，以此类推）&lt;/p&gt;
+&lt;figure c</summary>
+      
+    
+    
+    
+    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
+    
+    
+    <category term="C" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>static用法</title>
@@ -30,6 +352,81 @@
       
     <summary type="html">&lt;h3 id=&quot;static用法&quot;&gt;&lt;a href=&quot;#static用法&quot; class=&quot;headerlink&quot; title=&quot;static用法&quot;&gt;&lt;/a&gt;static用法&lt;/h3&gt;&lt;p&gt;学习static关键字定义静态变量的方法&lt;/p&gt;
 &lt;p&gt;普通变量和静态变量有什么区别？下列程</summary>
+      
+    
+    
+    
+    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
+    
+    
+    <category term="C" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>统计各种字符个数(字符串知识拓展)</title>
+    <link href="http://yoursite.com/2021/03/02/%E7%BB%9F%E8%AE%A1%E5%90%84%E7%A7%8D%E5%AD%97%E7%AC%A6%E4%B8%AA%E6%95%B0/"/>
+    <id>http://yoursite.com/2021/03/02/%E7%BB%9F%E8%AE%A1%E5%90%84%E7%A7%8D%E5%AD%97%E7%AC%A6%E4%B8%AA%E6%95%B0/</id>
+    <published>2021-03-02T03:11:04.000Z</published>
+    <updated>2021-03-04T07:17:59.908Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="统计各种字符个数"><a href="#统计各种字符个数" class="headerlink" title="统计各种字符个数"></a>统计各种字符个数</h3><p>输入一行字符串，分别统计出字母、数字、空格和其他字符个数</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctype.h&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> size = <span class="number">100</span>;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/2 10:53:47</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">char</span> str[size];</span><br><span class="line"><span class="keyword">int</span> alpha = <span class="number">0</span>,digit = <span class="number">0</span>,blank = <span class="number">0</span>,other = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> i;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"input string:"</span>);</span><br><span class="line">fgets(str,size,<span class="built_in">stdin</span>);</span><br><span class="line"><span class="keyword">int</span> len = <span class="built_in">strlen</span>(str);</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; len; i ++)&#123;</span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">isalpha</span>(str[i]))&#123;</span><br><span class="line">alpha++;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">isdigit</span>(str[i]))&#123;</span><br><span class="line">digit++;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(isblank(str[i]))&#123;</span><br><span class="line">blank++;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">other++;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"alpha:%d digit:%d blank:%d other:%d\n"</span>,alpha,digit,blank,other);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="知识拓展1：字符串"><a href="#知识拓展1：字符串" class="headerlink" title="知识拓展1：字符串"></a>知识拓展1：字符串</h4><p><code>char word[size]=&quot;I AM FINE&quot;</code>,编译器会自动加入末尾的 <code>\0</code></p><h5 id="字符串的输入：fgets-amp-scanf"><a href="#字符串的输入：fgets-amp-scanf" class="headerlink" title="字符串的输入：fgets &amp; scanf"></a>字符串的输入：fgets &amp; scanf</h5><ul><li><p>fgets(add,size,inputfile)</p><ul><li>add是存储字符串数组的首地址，通常使用数组名即可</li><li>size指明读入字符的最大数量，如果该参数的值是n，那么fgets()将读入n-1个字符，或者读到遇到的第一个换行符为止</li><li>inputfile指明要读入的文件，若是从键盘读入，则以stdin作为参数</li></ul></li><li><p>scanf(“%s”,add)</p><ul><li>读到一个空白字符（空行、空格、制表符或换行符）作为字符串结束的标志</li><li>若是 <code>%10s</code>,那么scanf()将读取10个字符或读到第1个空白字符停止</li></ul></li></ul><h5 id="字符串的输出：puts-amp-fputs-amp-printf"><a href="#字符串的输出：puts-amp-fputs-amp-printf" class="headerlink" title="字符串的输出：puts &amp; fputs &amp; printf"></a>字符串的输出：puts &amp; fputs &amp; printf</h5><ul><li>puts(add)<ul><li>add是字符串的首地址</li><li>输出字符串的时候会在末尾自动加上换行符</li><li>遇到 <code>\0</code> 就停止</li></ul></li><li>fputs(add,outputfile)<ul><li>不会在末尾添加换行符</li></ul></li><li>printf(“%s\n”,add)</li></ul><h5 id="字符串函数"><a href="#字符串函数" class="headerlink" title="字符串函数"></a>字符串函数</h5><ol><li><p>strlen()</p><ul><li><p>strlen(&amp;add)</p></li><li><p>统计字符串的长度，包括字符串末尾的 <code>\0</code></p></li></ul></li><li><p>strcat()</p><ul><li>strcat(&amp;add1,&amp;add2)</li><li>拼接两个字符串，返回的是add1的首地址，add1变成两个字符串的拼接，add2不变</li><li>strcat不检查第一个字符数组的地址能否容纳两个字符串，容易造成字符溢出</li></ul></li><li><p>strncat()</p><ul><li>strncat(&amp;add1,&amp;add2,len)</li><li>作用也是拼接两个字符串，只是，在加到第len个字符或遇到空字符时就停止</li></ul></li><li><p>strcmp()</p><ul><li>strcmp(&amp;add1,&amp;add2)</li><li>比较两个字符串是否相等，即一模一样，若相等则返回0，若不等就返回非0值</li><li>该函数比较的是字符串，不是整个数组，例如，add1的数组空间大小是40字节，但是add1中的字符串只占了6个字节，该函数只比较第一个空字符前面的内容</li></ul></li><li><p>strncmp()</p><ul><li>strncmp(&amp;add1,&amp;add2,len)</li><li>只比较len长度的字符串</li></ul></li><li><p>strcpy()</p><ul><li>strcpy(&amp;target,origal)</li><li>源字符串被拷贝进target中</li><li>详细参考《c prime plus》P353</li></ul></li><li><p>strncpy()</p><ul><li>strncpy(&amp;traget,origal,n)</li><li>把origal中的n个字符或空字符之前的字符拷贝至target中</li></ul></li><li><p>sprintf()</p><ol><li>如：sprintf(formal,”%s ,%-19s,%6.2f\n”,i,j,k)</li></ol><ul><li>sprintf的用法和printf的用法相同，只是sprintf把组合后的字符串存储在数组中而不是显示在屏幕上</li></ul></li></ol><h5 id="知识拓展2：ctype-h函数"><a href="#知识拓展2：ctype-h函数" class="headerlink" title="知识拓展2：ctype.h函数"></a>知识拓展2：ctype.h函数</h5><ol><li>isalnum() 字母数字</li><li>isalpha() 字母</li><li>isblank() 标准的空白字符（空格、换行等）</li><li>iscntrl() 控制字符，ctrl + b</li><li>isdigit() 数字</li><li>isgraph() 除空格外任意可打印字符</li><li>islower() 小写字母</li><li>isprint(0 可打印字符</li><li>ispunct() 标点符号</li><li>isspace() 空白字符</li><li>issuper() 大写字母</li><li>isxdigit() 十六进制数字符</li><li>tolower()　如果是大写字符，返回小写字符</li><li>toupper() 如果是小写字符，返回大写字符</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;统计各种字符个数&quot;&gt;&lt;a href=&quot;#统计各种字符个数&quot; class=&quot;headerlink&quot; title=&quot;统计各种字符个数&quot;&gt;&lt;/a&gt;统计各种字符个数&lt;/h3&gt;&lt;p&gt;输入一行字符串，分别统计出字母、数字、空格和其他字符个数&lt;/p&gt;
+&lt;figure class</summary>
+      
+    
+    
+    
+    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
+    
+    
+    <category term="C" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>排列无重复数字的三位数</title>
+    <link href="http://yoursite.com/2021/03/02/%E6%8E%92%E5%88%97%E6%97%A0%E9%87%8D%E5%A4%8D%E6%95%B0%E5%AD%97%E7%9A%84%E4%B8%89%E4%BD%8D%E6%95%B0/"/>
+    <id>http://yoursite.com/2021/03/02/%E6%8E%92%E5%88%97%E6%97%A0%E9%87%8D%E5%A4%8D%E6%95%B0%E5%AD%97%E7%9A%84%E4%B8%89%E4%BD%8D%E6%95%B0/</id>
+    <published>2021-03-02T02:11:04.000Z</published>
+    <updated>2021-03-02T08:55:33.344Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="排列无重复数字的三位数"><a href="#排列无重复数字的三位数" class="headerlink" title="排列无重复数字的三位数"></a>排列无重复数字的三位数</h3><p>有1、2、3、4个数字，能够组成多少个互不相同且无重复数字的三位数？统计有多少个？</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/2 10:17:19</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> i,j,k;</span><br><span class="line"><span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line"> <span class="keyword">for</span>(i = <span class="number">1</span>;i &lt;= <span class="number">4</span>;i++)&#123;</span><br><span class="line"> <span class="keyword">for</span>(j = <span class="number">1</span>;j &lt;= <span class="number">4</span>;j++)&#123;</span><br><span class="line"> <span class="keyword">for</span>(k = <span class="number">1</span>;k &lt;= <span class="number">4</span>;k++)&#123;</span><br><span class="line"> <span class="keyword">if</span>(i!= j &amp; i!= k &amp; j!= k)&#123;</span><br><span class="line"> <span class="built_in">printf</span>(<span class="string">"%d%d%d "</span>,i,j,k);</span><br><span class="line"> count++;</span><br><span class="line"> &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="built_in">printf</span>(<span class="string">"\n%d"</span>,count);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>一开始并没想到该如何处理，想到的是直接用排列组合计算……</p><p>这里列举了所有的情况，然后去除重复数字，就是最后结果。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;排列无重复数字的三位数&quot;&gt;&lt;a href=&quot;#排列无重复数字的三位数&quot; class=&quot;headerlink&quot; title=&quot;排列无重复数字的三位数&quot;&gt;&lt;/a&gt;排列无重复数字的三位数&lt;/h3&gt;&lt;p&gt;有1、2、3、4个数字，能够组成多少个互不相同且无重复数字的三位数？</summary>
+      
+    
+    
+    
+    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
+    
+    
+    <category term="C" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>输出99乘法口诀表</title>
+    <link href="http://yoursite.com/2021/03/02/%E8%BE%93%E5%87%BA99%E4%B9%98%E6%B3%95%E5%8F%A3%E8%AF%80%E8%A1%A8/"/>
+    <id>http://yoursite.com/2021/03/02/%E8%BE%93%E5%87%BA99%E4%B9%98%E6%B3%95%E5%8F%A3%E8%AF%80%E8%A1%A8/</id>
+    <published>2021-03-02T01:53:04.000Z</published>
+    <updated>2021-03-02T08:55:47.445Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="输出99乘法口诀表"><a href="#输出99乘法口诀表" class="headerlink" title="输出99乘法口诀表"></a>输出99乘法口诀表</h3><p>按照下面格式输出99乘法口诀表</p><p>1*1=1</p><p>1*2=2    2*2=4</p><p>1*3 =3    2*3=6    ……</p><p>……</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/2 9:54:54</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> i,j;</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">1</span>; i &lt; <span class="number">10</span>; i++)&#123;</span><br><span class="line"><span class="keyword">for</span>(j = <span class="number">1</span>; j &lt;= i; j++)&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d * %d = %d "</span>,i,j,i*j);</span><br><span class="line"><span class="keyword">if</span>(i == j)&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>一开始尝试的是：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i = <span class="number">1</span>; i &lt; <span class="number">10</span>; i++)&#123;</span><br><span class="line"><span class="keyword">for</span>(j = i; j &lt; <span class="number">10</span>; j++)&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d * %d = %d\n"</span>,i,j,i*j);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>但是无论将回车放在哪里都无法输出成要求的格式，于是转换思路，由竖向打印转为横向打印。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;输出99乘法口诀表&quot;&gt;&lt;a href=&quot;#输出99乘法口诀表&quot; class=&quot;headerlink&quot; title=&quot;输出99乘法口诀表&quot;&gt;&lt;/a&gt;输出99乘法口诀表&lt;/h3&gt;&lt;p&gt;按照下面格式输出99乘法口诀表&lt;/p&gt;
+&lt;p&gt;1*1=1&lt;/p&gt;
+&lt;p&gt;1*2=2 </summary>
       
     
     
@@ -78,178 +475,6 @@
       
       
     <summary type="html">&lt;h3 id=&quot;斐波那契数列&quot;&gt;&lt;a href=&quot;#斐波那契数列&quot; class=&quot;headerlink&quot; title=&quot;斐波那契数列&quot;&gt;&lt;/a&gt;斐波那契数列&lt;/h3&gt;&lt;p&gt;古典问题：斐波那契数列（Fibonacci sequence），又称黄金分割数列、因数学家莱昂纳多·斐波那契</summary>
-      
-    
-    
-    
-    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
-    
-    
-    <category term="C" scheme="http://yoursite.com/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>三个数从小到大顺序输出</title>
-    <link href="http://yoursite.com/2019/07/13/%E4%B8%89%E4%B8%AA%E6%95%B0%E4%BB%8E%E5%B0%8F%E5%88%B0%E5%A4%A7%E9%A1%BA%E5%BA%8F%E8%BE%93%E5%87%BA/"/>
-    <id>http://yoursite.com/2019/07/13/%E4%B8%89%E4%B8%AA%E6%95%B0%E4%BB%8E%E5%B0%8F%E5%88%B0%E5%A4%A7%E9%A1%BA%E5%BA%8F%E8%BE%93%E5%87%BA/</id>
-    <published>2019-07-13T04:18:03.000Z</published>
-    <updated>2021-03-01T15:14:20.094Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="三个数从小到大顺序输出"><a href="#三个数从小到大顺序输出" class="headerlink" title="三个数从小到大顺序输出"></a>三个数从小到大顺序输出</h3><p>从键盘输入三个数，将3个数字从小到大进行排序顺序输出</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> *,<span class="keyword">int</span> *)</span></span>;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/1 16:41:59</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> *m,<span class="keyword">int</span> *n)</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> temp;</span><br><span class="line">temp = *m;</span><br><span class="line">*m = *n;</span><br><span class="line">*n = temp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> a,b,c;</span><br><span class="line"><span class="keyword">int</span> temp;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"input 3 numbers:"</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;a,&amp;b,&amp;c);</span><br><span class="line"></span><br><span class="line"><span class="comment">//sort</span></span><br><span class="line"><span class="keyword">if</span>(a &gt; b)&#123;</span><br><span class="line">swap(&amp;a,&amp;b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(a &gt; c)&#123;</span><br><span class="line">swap(&amp;a,&amp;c);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(b &gt; c)&#123;</span><br><span class="line">swap(&amp;b,&amp;c);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d %d %d\n"</span>,a,b,c);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>另外的方法，可以用通用工具库中的qsort函数，该函数原型在stdlib.h头文件中。</p><p>下面的程序可以对一串数从小到大的排序：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">void</span> *p1,<span class="keyword">const</span> <span class="keyword">void</span> *p2)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="comment">/* code */</span></span><br><span class="line"><span class="keyword">int</span> arr[<span class="number">10</span>];</span><br><span class="line"><span class="keyword">int</span> i;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"input 10 numbers:"</span>);</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; <span class="number">10</span>;i++)&#123;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;arr[i]);</span><br><span class="line">&#125;</span><br><span class="line">qsort(arr,<span class="number">10</span>,<span class="keyword">sizeof</span>(<span class="keyword">int</span>),cmp);</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; <span class="number">10</span>;i ++)&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d "</span>,*(arr+i));</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">void</span> *p1,<span class="keyword">const</span> <span class="keyword">void</span> *p2)</span></span>&#123;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> *a = (<span class="keyword">const</span> <span class="keyword">int</span> *) p1;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> *b = (<span class="keyword">const</span> <span class="keyword">int</span> *) p2;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(*a &lt; *b)&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(*a == *b)&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h5 id="知识拓展：qsort函数"><a href="#知识拓展：qsort函数" class="headerlink" title="知识拓展：qsort函数"></a>知识拓展：qsort函数</h5><p>函数原型：<code>void qsort(void *base,size_t nmemb,size_t size,int (\*compar)(const void *,const void *));</code></p><p>第一个参数是指针，指向待排序数组的首元素</p><p>第二个参数是带排序的数量</p><p>第三个参数是数组中每个元素的大小，通常是：sizeof(类型)</p><p>第四个参数是一个指向函数的指针，这个函数用于确定排序的顺序，上述程序中，p1和p2都是指向void的，所以必须在比较函数内部声明两个类型正确的指针，并初始化他们指向作为参数传入的值。修改该函数，可以改变排序的顺序是从大到小还是从小到达。</p><h5 id="知识拓展：C和C-中的void"><a href="#知识拓展：C和C-中的void" class="headerlink" title="知识拓展：C和C++中的void*"></a>知识拓展：C和C++中的void*</h5><p>两种语言中，都可以把任何类型的指针赋给void类型的指针，但是C++要求在把void*指针赋给任何类型的指针时必须进行强制类型转换。而C没有这样的要求。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;三个数从小到大顺序输出&quot;&gt;&lt;a href=&quot;#三个数从小到大顺序输出&quot; class=&quot;headerlink&quot; title=&quot;三个数从小到大顺序输出&quot;&gt;&lt;/a&gt;三个数从小到大顺序输出&lt;/h3&gt;&lt;p&gt;从键盘输入三个数，将3个数字从小到大进行排序顺序输出&lt;/p&gt;
-&lt;fi</summary>
-      
-    
-    
-    
-    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
-    
-    
-    <category term="C" scheme="http://yoursite.com/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>求最大公约数和最小公倍数</title>
-    <link href="http://yoursite.com/2019/07/13/%E6%B1%82%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0%E5%92%8C%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B0/"/>
-    <id>http://yoursite.com/2019/07/13/%E6%B1%82%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0%E5%92%8C%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B0/</id>
-    <published>2019-07-13T04:18:03.000Z</published>
-    <updated>2021-03-01T15:14:12.557Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="求最大公约数和最小公倍数"><a href="#求最大公约数和最小公倍数" class="headerlink" title="求最大公约数和最小公倍数"></a>求最大公约数和最小公倍数</h3><p>输入两个正整数m和n，求其最大公约数和最小公倍数</p><p>最大公约数：只两个或多个整数公有约数中最大的一个</p><p>最小公倍数：两个或多个整数公有的倍数叫做他们的公倍数，其中除0以外最小的一个倍数就叫做这几个整数的最小公倍数</p><p>最大公约数和最小公倍数的关系：最小公倍数 = 两个数的乘积 / 最大公约数</p><p>ps:暂不考虑0的情况</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">commonDivisor</span><span class="params">(<span class="keyword">int</span>,<span class="keyword">int</span>)</span></span>;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/1 14:40:29</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">commonDivisor</span><span class="params">(<span class="keyword">int</span> m,<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> bigger = m &gt; n?m:n;</span><br><span class="line"><span class="keyword">int</span> smaller = m &lt; n?m:n;</span><br><span class="line"><span class="keyword">int</span> i,commonDivisor = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">if</span>(bigger % smaller == <span class="number">0</span>)&#123;</span><br><span class="line"><span class="keyword">return</span> smaller;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; smaller; i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">if</span>(smaller % i == <span class="number">0</span> &amp;&amp; bigger % i== <span class="number">0</span> &amp;&amp; commonDivisor &lt; i)&#123;</span><br><span class="line">commonDivisor = i;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> commonDivisor;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> m,n;</span><br><span class="line"><span class="keyword">int</span> comDivisor;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"input two numbers:"</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;m,&amp;n);</span><br><span class="line">comDivisor = commonDivisor(m,n);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"common divisor is: %d\n"</span>,comDivisor);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"common multiple is: %d\n"</span>,(m*n)/comDivisor);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>上述方法，求最大公约数是用一个for循环找到两个数的公约数，最大者即为最大公约数，下面的方法是用辗转相除法求最大公约数</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">commonDivisor</span><span class="params">(<span class="keyword">int</span> m,<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> temp;</span><br><span class="line">    <span class="comment">//m始终是较大的数</span></span><br><span class="line"><span class="keyword">if</span>(m &lt; n)&#123;</span><br><span class="line">temp = m;</span><br><span class="line">m = n;</span><br><span class="line">n = temp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//辗转相除法</span></span><br><span class="line"><span class="keyword">while</span>(n != <span class="number">0</span>)&#123;</span><br><span class="line">temp = m % n;</span><br><span class="line">m = n;</span><br><span class="line">n = temp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> m;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;求最大公约数和最小公倍数&quot;&gt;&lt;a href=&quot;#求最大公约数和最小公倍数&quot; class=&quot;headerlink&quot; title=&quot;求最大公约数和最小公倍数&quot;&gt;&lt;/a&gt;求最大公约数和最小公倍数&lt;/h3&gt;&lt;p&gt;输入两个正整数m和n，求其最大公约数和最小公倍数&lt;/p&gt;
-&lt;</summary>
-      
-    
-    
-    
-    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
-    
-    
-    <category term="C" scheme="http://yoursite.com/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>廖雪峰Git教程笔记整理</title>
-    <link href="http://yoursite.com/2019/07/13/git%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/"/>
-    <id>http://yoursite.com/2019/07/13/git%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/</id>
-    <published>2019-07-13T04:18:03.000Z</published>
-    <updated>2021-02-27T02:23:28.988Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="提交代码三步走："><a href="#提交代码三步走：" class="headerlink" title="提交代码三步走："></a>提交代码三步走：</h3><h4 id="添加文件到暂存区：git-add"><a href="#添加文件到暂存区：git-add" class="headerlink" title="添加文件到暂存区：git add"></a>添加文件到暂存区：git add</h4><ol><li>添加一个或多个文件到暂存区：如 <code>git add README hello.php</code></li><li>添加当前目录下的所有文件到暂存区：<code>git add .</code></li><li>添加指定目录到暂存区：<code>git add dir</code></li></ol><h4 id="将暂存区内容添加到本地仓库：git-commit"><a href="#将暂存区内容添加到本地仓库：git-commit" class="headerlink" title="将暂存区内容添加到本地仓库：git commit"></a>将暂存区内容添加到本地仓库：git commit</h4><ol><li>将暂存区的文件全部提交到本地仓库：如<code>git commit -m &#39;message&#39;</code></li><li>提交暂存区的指定文件到仓库区：如<code>git commit text.c -m &#39;message&#39;</code></li><li>修改后不需要执行 <code>git add</code>命令直接来提交：如 <code>git commit -a &#39;message&#39;</code></li></ol><h4 id="上传远程代码并合并：git-push"><a href="#上传远程代码并合并：git-push" class="headerlink" title="上传远程代码并合并：git push"></a>上传远程代码并合并：git push</h4><ol><li>将本地仓库中的代码上传到远程仓库：<code>git push</code></li><li>本地分支版本上传到远程并合并：git push 远程主机名 本地分支名：远程分支名（本地分支名和远程分支名相同的话，可以省略冒号，如 <code>git push origin master</code>)</li></ol><h3 id="其他常用命令"><a href="#其他常用命令" class="headerlink" title="其他常用命令"></a>其他常用命令</h3><p>查看哪些文件修改了：<code>git status</code></p><p>查看修改的内容：<code>git diff</code></p><p>查看提交日志：<code>git log</code></p><p>简化日志信息：<code>git log --pretty=oneline</code></p><h3 id="一、版本管理"><a href="#一、版本管理" class="headerlink" title="一、版本管理"></a>一、版本管理</h3><h4 id="1-把当前版本回退到上一个版本"><a href="#1-把当前版本回退到上一个版本" class="headerlink" title="1.把当前版本回退到上一个版本"></a>1.把当前版本回退到上一个版本</h4><p><code>git reset --hard HEAD^</code></p><p><code>git  &lt;filename&gt;</code>    //查看文件内容</p><h4 id="2-回退到上一个版本之后又想回到这个版本"><a href="#2-回退到上一个版本之后又想回到这个版本" class="headerlink" title="2.回退到上一个版本之后又想回到这个版本"></a>2.回退到上一个版本之后又想回到这个版本</h4><p>找到该版本号（无需写全，只需写前几位，多写几位不然找不到的…）</p><p><code>git reset --hard  &lt;id&gt;</code></p><h4 id="3-当前窗口已关闭，还想回到某一个版本"><a href="#3-当前窗口已关闭，还想回到某一个版本" class="headerlink" title="3.当前窗口已关闭，还想回到某一个版本"></a>3.当前窗口已关闭，还想回到某一个版本</h4><p><code>git reflog</code>    //找到版本id</p><p><code>git reset --hard  &lt;id&gt;</code></p><h3 id="二、工作区与版本库"><a href="#二、工作区与版本库" class="headerlink" title="二、工作区与版本库"></a>二、工作区与版本库</h3><p>理解他们很重要!</p><p>commit 后，用 <code>git diff HEAD -- &lt;filename&gt;</code> 查看工作区和版本库里最新版本的区别。</p><h4 id="1-没使用add和commit"><a href="#1-没使用add和commit" class="headerlink" title="1.没使用add和commit"></a>1.没使用add和commit</h4><p><code>git checkout -- &lt;filename&gt;</code>    //丢弃文件的修改内容</p><h4 id="2-使用了add-，未使用-commit"><a href="#2-使用了add-，未使用-commit" class="headerlink" title="2.使用了add ，未使用 commit"></a>2.使用了add ，未使用 commit</h4><p><code>git reset HEAD &lt;filename&gt;</code>    //相当于撤销掉了add命令</p><h4 id="3-使用了add和commit命令"><a href="#3-使用了add和commit命令" class="headerlink" title="3.使用了add和commit命令"></a>3.使用了add和commit命令</h4><p>版本回退</p><h3 id="三、删除文件"><a href="#三、删除文件" class="headerlink" title="三、删除文件"></a>三、删除文件</h3><p>add和commit 之后想删除文件</p><h4 id="1-确实想删除"><a href="#1-确实想删除" class="headerlink" title="1.确实想删除"></a>1.确实想删除</h4><p><code>git rm &lt;filename&gt;</code></p><p><code>git commit -m &quot;XXX&quot;</code></p><h4 id="2-手滑"><a href="#2-手滑" class="headerlink" title="2.手滑"></a>2.手滑</h4><p><code>git checkout -- &lt;filename&gt;</code>    //一键还原，就是用版本库里的版本替换工作区的版本</p><p>ps:从未添加进版本库里的被删除的文件是无法恢复的!</p><h3 id="四、远程仓库"><a href="#四、远程仓库" class="headerlink" title="四、远程仓库"></a>四、远程仓库</h3><h4 id="1-初始化本地仓库"><a href="#1-初始化本地仓库" class="headerlink" title="1.初始化本地仓库"></a>1.初始化本地仓库</h4><p><code>git init</code></p><h4 id="2-添加远程仓库"><a href="#2-添加远程仓库" class="headerlink" title="2.添加远程仓库"></a>2.添加远程仓库</h4><p><code>git remote add &lt;name&gt; &lt;SSH/Https&gt;</code></p><h4 id="3-把本地库的内容推送到远程库"><a href="#3-把本地库的内容推送到远程库" class="headerlink" title="3.把本地库的内容推送到远程库"></a>3.把本地库的内容推送到远程库</h4><p>如果远程库是空的：<code>git push -u &lt;name&gt; &lt;branchname&gt;</code>    //第一次推送，本地分支与远程分支关联起来</p><p>非空：<code>git push &lt;name&gt; &lt;branchname&gt;</code>    //提交</p><h4 id="4-从远程库克隆"><a href="#4-从远程库克隆" class="headerlink" title="4.从远程库克隆"></a>4.从远程库克隆</h4><p><code>git clone &lt;SSH/Https&gt;</code>    //推荐使用SSH</p><h3 id="五、新建分支"><a href="#五、新建分支" class="headerlink" title="五、新建分支"></a>五、新建分支</h3><h4 id="1-创建分支"><a href="#1-创建分支" class="headerlink" title="1.创建分支"></a>1.创建分支</h4><p><code>git checkout -b &lt;branchname&gt;</code></p><h4 id="2-查看当前分支"><a href="#2-查看当前分支" class="headerlink" title="2.查看当前分支"></a>2.查看当前分支</h4><p><code>git branch</code></p><h4 id="3-切换回某个分支"><a href="#3-切换回某个分支" class="headerlink" title="3.切换回某个分支"></a>3.切换回某个分支</h4><p><code>git checkout &lt;branchname&gt;</code></p><h4 id="4-合并分支"><a href="#4-合并分支" class="headerlink" title="4.合并分支"></a>4.合并分支</h4><p><code>git merge &lt;branchname&gt;</code></p><p>ps:这种合并是快速合并，另外有 –no-ff方式合并分支</p><p><code>git merge --no-ff -m &#39;XXX&#39; &lt;branchname&gt;</code></p><h4 id="5-合并完分支可以删除分支"><a href="#5-合并完分支可以删除分支" class="headerlink" title="5.合并完分支可以删除分支"></a>5.合并完分支可以删除分支</h4><p><code>git branch -d &lt;branchname&gt;</code>    //删除分支</p><h3 id="六、解决冲突"><a href="#六、解决冲突" class="headerlink" title="六、解决冲突"></a>六、解决冲突</h3><h4 id="1-当两个分支都有了各自的提交"><a href="#1-当两个分支都有了各自的提交" class="headerlink" title="1.当两个分支都有了各自的提交"></a>1.当两个分支都有了各自的提交</h4><p>需要手动修改不同的内容，然后add，commit</p><p>ps: <code>git log --graph --pretty=oneline --abbrev -commit</code></p><h3 id="七、分支管理策略"><a href="#七、分支管理策略" class="headerlink" title="七、分支管理策略"></a>七、分支管理策略</h3><h4 id="1-最佳实践："><a href="#1-最佳实践：" class="headerlink" title="1.最佳实践："></a>1.最佳实践：</h4><p>1）master分支十分稳定，用来发布新版本</p><p>2）dev是用来工作的分支</p><p>3）团队成员有自己的分支，往dev上合并</p><h4 id="2-bug分支"><a href="#2-bug分支" class="headerlink" title="2.bug分支"></a>2.bug分支</h4><p><code>git stash</code>    //保护现场</p><p><code>git checkout &lt;branchname&gt;</code>    //选择在哪个分支上修复bug</p><p><code>git checkout -b &lt;name&gt;</code>    //创建分支</p><p><code>git checkout &lt;branchname&gt;</code>    //切换回原来的分支</p><p><code>git merge --no-ff -m &#39;XXX&#39; &lt;name&gt;</code>    //采用–no-ff方式合并分支</p><p><code>git branch -d &lt;name&gt;</code>    //合并完，删除分支</p><p><code>git checkout &lt;branchname&gt;</code>    //切换到原来工作的分支上</p><p><code>git stash list</code>     //查看现场</p><p>//恢复现场</p><h5 id="1）"><a href="#1）" class="headerlink" title="1）"></a>1）</h5><p><code>git stash apply</code>     //恢复</p><p><code>git stash drop</code>    //删除stash内容</p><h5 id="2）"><a href="#2）" class="headerlink" title="2）"></a>2）</h5><p><code>git stash pop</code>    //恢复的同时把stash内容也删除了</p><p>ps:可以多次恢复，然后统一drop</p><p>//恢复指定内容</p><p><code>git stash</code>     //查看</p><p><code>git stash apply stash @{0}</code>    //恢复指定内容</p><p>//丢弃一个没有合并过的分支</p><p><code>git branch -D &lt;branchname&gt;</code></p><h3 id="八、多人协作"><a href="#八、多人协作" class="headerlink" title="八、多人协作"></a>八、多人协作</h3><p><code>git remote</code>    //查看远程看的信息</p><p><code>git remote -v</code>    //显示更详细的信息</p><p><code>git push origin &lt;branchname&gt;</code>    //推送分支</p><p><code>git checkout -b &lt;localbranchname&gt; &lt;remotename&gt;/&lt;remotebranchname&gt;</code>    //创建远程的dev分支到本地</p><h4 id="？两人提交的代码有冲突怎么办"><a href="#？两人提交的代码有冲突怎么办" class="headerlink" title="？两人提交的代码有冲突怎么办"></a><em>？两人提交的代码有冲突怎么办</em></h4><p>git pull 会失败</p><p><code>git branch --set-upstream-to = &lt;name&gt;/&lt;branchname&gt; &lt;branchname&gt;</code>    //指定本地branch与远程branch连接</p><p><code>git pull</code>    //再pull</p><h3 id="九、Rebase"><a href="#九、Rebase" class="headerlink" title="九、Rebase"></a>九、Rebase</h3><p>先<code>pull</code>别人的然后再<code>git rebase</code>。</p><p>作用：好看！把本地未push的分叉提交历史整理成直线，使查看历史提交变化时更容易。</p><h3 id="十、标签管理"><a href="#十、标签管理" class="headerlink" title="十、标签管理"></a>十、标签管理</h3><h4 id="1-创建标签"><a href="#1-创建标签" class="headerlink" title="1.创建标签"></a>1.创建标签</h4><p><code>git checkout &lt;branchname&gt;</code>    //先切换到该分支上</p><p><code>git tag &lt;tagname&gt;</code>    //打标签</p><p><code>git tag</code>    //查看所有标签</p><p>ps:默认标签是打在最新提交的commit上</p><p>若想在之前的commit上打标签，先找到历史提交的commit id</p><p><code>git tag &lt;tagname&gt; &lt;id&gt;</code></p><p><code>git show &lt;tagname&gt;</code>    //查看标签信息</p><p><code>git tag -a &lt;tagname&gt; -m &#39;XXX&#39; &lt;id&gt;</code>    //创建带有说明的标签</p><p>ps:标签总是和某个commit挂钩的，如果这个commit出现在两个不同的分支，那么这两个分支都可以看到这个标签</p><h4 id="2-操作标签"><a href="#2-操作标签" class="headerlink" title="2.操作标签"></a>2.操作标签</h4><p><code>git tag -d &lt;tagname&gt;</code>    //删除标签</p><p><code>git push &lt;name&gt; &lt;tagname&gt;</code>    //推送某个标签到远程</p><p><code>git push &lt;name&gt; --tags</code>    //推送全部未推送到远程的本地标签</p><p>若标签已推送到远程</p><p><code>git tag -d &lt;tagname&gt;</code>    //先本地删除</p><p><code>git push &lt;name&gt; :refs/tags/&lt;tagname&gt;</code>    //从远程删除</p><p>其他：<code>git remote rm &lt;name&gt;</code>    //删除已有的github远程库</p><h3 id="十一、自定义git"><a href="#十一、自定义git" class="headerlink" title="十一、自定义git"></a>十一、自定义git</h3><h4 id="1-忽略特殊文件"><a href="#1-忽略特殊文件" class="headerlink" title="1.忽略特殊文件"></a>1.忽略特殊文件</h4><p>没懂…</p><p>2.配置别名</p><p><code>git config --global alias.&lt;replacename&gt; &lt;name&gt;</code></p><p>例如：git config –global alias.lg “log –graph –pretty=oneline –abbrev-commit”</p><p>​    输入git lg 即可查看分支合并情况</p><p>配置信息在隐藏目录  .git/config 中</p><p>ps:global参数是全局参数，也就是这些命令在这台电脑的所有git仓库下都有用</p><p>十二、个人遇到的错误及解决办法</p><p>refusing to merge unrelated histories*  本地仓库和远程不是同一个仓库，无法合并两个独立的仓库历史</p><p>解决办法：<code>git pull &lt;name&gt; &lt;branchname&gt; --allow-unrelated-histories</code></p><p>​        <code>git push &lt;name&gt; &lt;localbranch&gt;:&lt;remotebranch&gt;</code></p><h4 id="资源："><a href="#资源：" class="headerlink" title="资源："></a>资源：</h4><p><a href="https://gitee.com/liaoxuefeng/learn-java/raw/master/teach/git-cheatsheet.pdf" target="_blank" rel="noopener">Git Cheat Sheet</a></p><p><a href="https://git-scm.com/" target="_blank" rel="noopener">Git官方网站</a></p><p><a href="https://www.jianshu.com/p/096ba51647e7" target="_blank" rel="noopener">Git标签和分支详解</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;提交代码三步走：&quot;&gt;&lt;a href=&quot;#提交代码三步走：&quot; class=&quot;headerlink&quot; title=&quot;提交代码三步走：&quot;&gt;&lt;/a&gt;提交代码三步走：&lt;/h3&gt;&lt;h4 id=&quot;添加文件到暂存区：git-add&quot;&gt;&lt;a href=&quot;#添加文件到暂存区：git-</summary>
-      
-    
-    
-    
-    <category term="常用技能" scheme="http://yoursite.com/categories/常用技能/"/>
-    
-    
-    <category term="git" scheme="http://yoursite.com/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>求素数问题</title>
-    <link href="http://yoursite.com/2019/07/13/%E6%B1%82%E7%B4%A0%E6%95%B0%E9%97%AE%E9%A2%98/"/>
-    <id>http://yoursite.com/2019/07/13/%E6%B1%82%E7%B4%A0%E6%95%B0%E9%97%AE%E9%A2%98/</id>
-    <published>2019-07-13T04:18:03.000Z</published>
-    <updated>2021-03-01T15:14:00.779Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="求素数问题"><a href="#求素数问题" class="headerlink" title="求素数问题"></a>求素数问题</h4><p>判断101-200之间有多少个素数，并输出所有素数。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/1 10:34:34</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> i,j;</span><br><span class="line"><span class="keyword">int</span> flag = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">101</span>;i &lt;= <span class="number">200</span>;i++)&#123;</span><br><span class="line"><span class="keyword">for</span>(j = <span class="number">2</span>;j &lt;= <span class="built_in">sqrt</span>((<span class="keyword">double</span>)(i+<span class="number">1</span>));j++)&#123;</span><br><span class="line"><span class="keyword">if</span>(i%j == <span class="number">0</span>)&#123;</span><br><span class="line">flag = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(flag)&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d "</span>,i);</span><br><span class="line">count ++;</span><br><span class="line">&#125;</span><br><span class="line">flag = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"\n%d"</span>,count);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h5 id="知识拓展：sqrt函数"><a href="#知识拓展：sqrt函数" class="headerlink" title="知识拓展：sqrt函数"></a>知识拓展：sqrt函数</h5><p>头文件：math.h</p><p>函数原型：double sqrt(double x)</p><p>返回值：X的平方值</p><p>这里 i 是 int 类型要强制转换成 double型，但如果只写成 <code>sqrt(i+1)</code>也是可以的，int型可以自动转换成double型，这里使用 <code>i+1</code>而不是 <code>i</code>是为了让 <code>sqrt</code>的计算结果更大，不至于遗漏。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h4 id=&quot;求素数问题&quot;&gt;&lt;a href=&quot;#求素数问题&quot; class=&quot;headerlink&quot; title=&quot;求素数问题&quot;&gt;&lt;/a&gt;求素数问题&lt;/h4&gt;&lt;p&gt;判断101-200之间有多少个素数，并输出所有素数。&lt;/p&gt;
-&lt;figure class=&quot;highlight c&quot;</summary>
-      
-    
-    
-    
-    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
-    
-    
-    <category term="C" scheme="http://yoursite.com/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>猴子吃桃问题</title>
-    <link href="http://yoursite.com/2019/07/13/%E7%8C%B4%E5%AD%90%E5%90%83%E6%A1%83%E9%97%AE%E9%A2%98/"/>
-    <id>http://yoursite.com/2019/07/13/%E7%8C%B4%E5%AD%90%E5%90%83%E6%A1%83%E9%97%AE%E9%A2%98/</id>
-    <published>2019-07-13T04:18:03.000Z</published>
-    <updated>2021-03-01T15:13:37.538Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="猴子吃桃问题"><a href="#猴子吃桃问题" class="headerlink" title="猴子吃桃问题"></a>猴子吃桃问题</h3><p>猴子吃桃问题：猴子第一天吃了若干个桃子，当即吃了一半，还不解馋，又多吃了一个； 第二天，吃剩下的桃子的一半，还不过瘾，又多吃了一个；以后每天都吃前一天剩下的一半多一个，到第10天想再吃时，只剩下一个桃子了。问第一天共吃了多少个桃子？</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> left = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(i; i &lt; <span class="number">10</span>;i++)&#123;</span><br><span class="line">left = <span class="number">2</span>*(left + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"the first day ate %d peaches\n"</span>,left/<span class="number">2</span> + <span class="number">1</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;猴子吃桃问题&quot;&gt;&lt;a href=&quot;#猴子吃桃问题&quot; class=&quot;headerlink&quot; title=&quot;猴子吃桃问题&quot;&gt;&lt;/a&gt;猴子吃桃问题&lt;/h3&gt;&lt;p&gt;猴子吃桃问题：猴子第一天吃了若干个桃子，当即吃了一半，还不解馋，又多吃了一个； 第二天，吃剩下的桃子的一半，</summary>
-      
-    
-    
-    
-    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
-    
-    
-    <category term="C" scheme="http://yoursite.com/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>矩阵对角线元素之和</title>
-    <link href="http://yoursite.com/2019/07/13/%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%A7%92%E5%85%83%E7%B4%A0%E4%B9%8B%E5%92%8C/"/>
-    <id>http://yoursite.com/2019/07/13/%E7%9F%A9%E9%98%B5%E5%AF%B9%E8%A7%92%E5%85%83%E7%B4%A0%E4%B9%8B%E5%92%8C/</id>
-    <published>2019-07-13T04:18:03.000Z</published>
-    <updated>2021-03-01T15:13:45.626Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="矩阵对角线元素之和"><a href="#矩阵对角线元素之和" class="headerlink" title="矩阵对角线元素之和"></a>矩阵对角线元素之和</h3><p>求一个3*3矩阵对角线元素之和 。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> i,j;</span><br><span class="line"><span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">int</span> arr[<span class="number">3</span>][<span class="number">3</span>];</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"input 9 numbers:"</span>);</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; <span class="number">3</span>;i++)</span><br><span class="line"><span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;arr[i][j]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; <span class="number">3</span>;i++)&#123;</span><br><span class="line"><span class="keyword">for</span>(j = <span class="number">0</span>;j &lt; <span class="number">3</span>;j++)&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%3d"</span>,arr[i][j]);</span><br><span class="line"><span class="keyword">if</span>((j+<span class="number">1</span>)% <span class="number">3</span> == <span class="number">0</span>)&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; <span class="number">3</span>;i++)&#123;</span><br><span class="line">sum += arr[i][i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%3d\n"</span>,sum);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;矩阵对角线元素之和&quot;&gt;&lt;a href=&quot;#矩阵对角线元素之和&quot; class=&quot;headerlink&quot; title=&quot;矩阵对角线元素之和&quot;&gt;&lt;/a&gt;矩阵对角线元素之和&lt;/h3&gt;&lt;p&gt;求一个3*3矩阵对角线元素之和 。&lt;/p&gt;
-&lt;figure class=&quot;highl</summary>
-      
-    
-    
-    
-    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
-    
-    
-    <category term="C" scheme="http://yoursite.com/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>自由落体计算</title>
-    <link href="http://yoursite.com/2019/07/13/%E8%87%AA%E7%94%B1%E8%90%BD%E4%BD%93%E8%AE%A1%E7%AE%97/"/>
-    <id>http://yoursite.com/2019/07/13/%E8%87%AA%E7%94%B1%E8%90%BD%E4%BD%93%E8%AE%A1%E7%AE%97/</id>
-    <published>2019-07-13T04:18:03.000Z</published>
-    <updated>2021-03-01T15:14:27.371Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="自由落体计算"><a href="#自由落体计算" class="headerlink" title="自由落体计算"></a>自由落体计算</h3><p>一球从100米高度自由落下，每次落地后反跳回原高度的一半；再落下，求它在第10次落地时，共经过多少米？第10次反弹多高？</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> i;</span><br><span class="line"><span class="keyword">double</span> hight = <span class="number">100.0</span>;</span><br><span class="line"><span class="keyword">double</span> sum = hight;</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">1</span>;i &lt; <span class="number">10</span>;i++)&#123;</span><br><span class="line">hight /= <span class="number">2</span>;</span><br><span class="line">sum += <span class="number">2</span>*hight;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"distance: %f,bounce hight:%f\n"</span>,sum,hight/<span class="number">2</span>);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="易错点："><a href="#易错点：" class="headerlink" title="易错点："></a>易错点：</h4><p>计算路程的时候忘记算落下的路程，只计算了反弹的路程。</p><p>另外，循环的次数容易弄错，for循环中只计算了9次反弹，所以第10次反弹要另外算一次。</p><p>正确画图有利于解题。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;自由落体计算&quot;&gt;&lt;a href=&quot;#自由落体计算&quot; class=&quot;headerlink&quot; title=&quot;自由落体计算&quot;&gt;&lt;/a&gt;自由落体计算&lt;/h3&gt;&lt;p&gt;一球从100米高度自由落下，每次落地后反跳回原高度的一半；再落下，求它在第10次落地时，共经过多少米？第10</summary>
       
     
     
