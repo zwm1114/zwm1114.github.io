@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>求圆的周长和面积(#define&amp;#include)未完成！ | 一颗土豆子</title>
+  <title>求圆的周长和面积(#define&amp;#include) | 一颗土豆子</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 				  	
 				    <li><a href="/categories/C语言/" class="animsition-link">C语言<small>(0)</small></a></li>
 				    
-				    <li><a href="/categories/C语言基础编程题/" class="animsition-link">C语言基础编程题<small>(36)</small></a></li>
+				    <li><a href="/categories/C语言基础编程题/" class="animsition-link">C语言基础编程题<small>(42)</small></a></li>
 				    
 				    <li><a href="/categories/常用技能/" class="animsition-link">常用技能<small>(2)</small></a></li>
 				    
@@ -168,14 +168,15 @@
     
     
 </span>
-                <h1>求圆的周长和面积(#define&#include)未完成！</h1>
+                <h1>求圆的周长和面积(#define&#include)</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
       		<h3 id="求圆的周长和面积"><a href="#求圆的周长和面积" class="headerlink" title="求圆的周长和面积"></a>求圆的周长和面积</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PI 3.14</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/7 10:59:29</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> r;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"intput radius:"</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;r);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Perimeter:%.2f\n"</span>,<span class="number">2</span>*PI*r);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"extent:%.2f\n"</span>,PI*r*r);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="知识拓展1：C预处理器"><a href="#知识拓展1：C预处理器" class="headerlink" title="知识拓展1：C预处理器"></a>知识拓展1：C预处理器</h4><p>C预处理器在程序执行之前查看程序，根据程序中的预处理器指令，预处理器把符号缩写替换成其表示的内容，预处理器可以包含程序所需的其他文件，可以选择让编译器查看哪些代码。基本上它的工作是把一些文本转换成另外一些文本。</p>
-<h4 id="知识拓展2：-define"><a href="#知识拓展2：-define" class="headerlink" title="知识拓展2：#define"></a>知识拓展2：#define</h4><p>#define PX printf(“hello\n”)</p>
+<h4 id="知识拓展2：-define"><a href="#知识拓展2：-define" class="headerlink" title="知识拓展2：#define"></a>知识拓展2：#define</h4><p>用宏创建字符串</p>
+<p>#define PX printf(“hello\n”)</p>
 <ol>
 <li><p>预处理器指令从#开始运行，到后面的第一个换行符为止，也就是说，指令的长度仅限于一行。</p>
 </li>
@@ -187,7 +188,24 @@
 <p>宏的名称中不允许有空格，而且必须遵循C变量的命名规则</p>
 </li>
 </ol>
-<h4 id="知识拓展2：-include"><a href="#知识拓展2：-include" class="headerlink" title="知识拓展2：#include"></a>知识拓展2：#include</h4>
+<p>在 <code>#define</code>中使用参数</p>
+<p><code>#define SQUARE(X) X*X</code></p>
+<ol>
+<li>预处理器不做计算、不求值、只替换字符序列，例：如果 <code>#define SQUARE(X) X*X</code> 则 <code>SQUARE(x+2)</code> 得到的是 <code>x+2*x+2</code> ，如果想得到正确的结果，应 <code>#define SQUARE(x) (x)(x)</code>,而且，一般而言，不要在宏中使用递增或递减运算符。</li>
+</ol>
+<h4 id="知识拓展2：-include"><a href="#知识拓展2：-include" class="headerlink" title="知识拓展2：#include"></a>知识拓展2：#include</h4><ol>
+<li>尖括号告诉预处理器在标准系统目录中查找该文件</li>
+<li>双引号告诉预处理器首先在当前目录中（或文件名中指定的其他目录）查找该文件，如果未找到再查找标准系统目录</li>
+</ol>
+<h4 id="知识拓展3：条件编译"><a href="#知识拓展3：条件编译" class="headerlink" title="知识拓展3：条件编译"></a>知识拓展3：条件编译</h4><ol>
+<li><p>可以使用一些指令告诉编译器根据编译时的条件执行或忽略信息块</p>
+<p><code>#ifdef #else #endif</code></p>
+<p><code>#ifndef</code><br><code>#undef</code></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> MAVIS</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"horse.h"</span>	<span class="comment">//如果已经用了#define定义了MAVIS，则执行下面的指令</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> STABLES 5</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">else</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"cow.h"</span>	<span class="comment">//如果没有用#define定义MAVIS,则执行下面的指令</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> STABLES 15</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">undef</span> MAVIS	<span class="comment">//取消宏定义</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> MAVIS </span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ANY	<span class="comment">//如果没有用#define定义MAVIS，则执行该指令</span></span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
