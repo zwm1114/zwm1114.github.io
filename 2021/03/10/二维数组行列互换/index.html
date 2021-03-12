@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>判断三角型的类型 | 一颗土豆子</title>
+  <title>二维数组行列互换(calloc函数&amp;realloc函数) | 一颗土豆子</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -158,8 +158,8 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2021-03-09T01:17:51.000Z" itemprop="datePublished">
-          2021-03-09
+      <time datetime="2021-03-10T12:44:55.000Z" itemprop="datePublished">
+          2021-03-10
       </time>
     
     
@@ -168,27 +168,37 @@
     
     
 </span>
-                <h1>判断三角型的类型</h1>
+                <h1>二维数组行列互换(calloc函数&realloc函数)</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h3 id="判断三角型的类型"><a href="#判断三角型的类型" class="headerlink" title="判断三角型的类型"></a>判断三角型的类型</h3><p>输入三角型三条边，判断其类型（普通、直角、等腰、等边）？</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/9 9:19:54</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a,b,c;</span><br><span class="line">	<span class="keyword">int</span> temp;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"enter the three sides of triangle:"</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d %d %d"</span>,&amp;a,&amp;b,&amp;c);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(a &lt; b)&#123;</span><br><span class="line">		temp = a;</span><br><span class="line">		a = b;</span><br><span class="line">		b = temp;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(a &lt; c)&#123;</span><br><span class="line">		temp = a;</span><br><span class="line">		a = c;</span><br><span class="line">		c = temp;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(b + c &lt; a)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"not triangle\n"</span>);</span><br><span class="line">		<span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span>(a == b &amp;&amp; a == c)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"Equilateral triangle\n"</span>);</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(a == b || a == c || b == c)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"isosceles triangle\n"</span>);</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(c*c + b*b == a*a)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"right triangle\n"</span>);</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"common triangle\n"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      		<h3 id="二维数组行列互换"><a href="#二维数组行列互换" class="headerlink" title="二维数组行列互换"></a>二维数组行列互换</h3><p>将一个二维数组行列互换，存到另一个二维数组中</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/10 21:08:28</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> m,n;</span><br><span class="line">	<span class="keyword">int</span> i,j;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"how many rows and lines:"</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;m,&amp;n);</span><br><span class="line">	<span class="keyword">int</span> arr[m][n];</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"input numbers:"</span>);</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; m;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(j = <span class="number">0</span>;j &lt; n;j++)&#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;arr[i][j]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> <span class="keyword">arr_t</span>[n][m];</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; n;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(j = <span class="number">0</span>;j &lt; m;j++)&#123;</span><br><span class="line">			<span class="keyword">arr_t</span>[i][j] = arr[j][i];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"exchange:\n"</span>);</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; n;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(j = <span class="number">0</span>;j &lt; m;j++)&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%d "</span>,<span class="keyword">arr_t</span>[i][j]);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>注意：要先判断是否构成三角形</p>
+<h4 id="知识拓展1：calloc函数"><a href="#知识拓展1：calloc函数" class="headerlink" title="知识拓展1：calloc函数"></a>知识拓展1：calloc函数</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> *newMem;</span><br><span class="line">newMem = (<span class="keyword">long</span> *)<span class="built_in">calloc</span>(<span class="number">100</span>,<span class="keyword">sizeof</span>(<span class="keyword">long</span>));</span><br></pre></td></tr></table></figure>
+
+<p>calloc函数接受两个参数</p>
+<ol>
+<li>第一个参数是所需的存储单元的数量</li>
+<li>第二个参数是存储单元的大小（以字节为单位）</li>
+<li>返回值是指向void的指针，如果要存储不同的类型，应使用强制类型转换运算符</li>
+</ol>
+<h4 id="知识拓展2：realloc函数"><a href="#知识拓展2：realloc函数" class="headerlink" title="知识拓展2：realloc函数"></a>知识拓展2：realloc函数</h4><p>先判断当前的指针是否有足够的连续空间，如果有，扩大mem_address指向的地址，并且将mem_address返回，如果空间不够，先按照newsize指定的大小分配空间，将原有数据全部拷贝至新分配的内存区域，然后自动释放原来mem_address所指向的内存区域，同时返回新分配的内存区域的首地址。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> *pstr;</span><br><span class="line">pstr = (<span class="keyword">char</span> *)<span class="built_in">realloc</span>(pstr,<span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2021/03/09/汉诺塔问题/" style="float: left;">
-        ← 汉诺塔问题
+    <a class="pull-left" href="/2021/03/10/用选择法对数组中的数由小到大排序/" style="float: left;">
+        ← 用选择法对数组中的数由小到大排序
     </a>
     
     
-    <a class="pull-right" href="/2021/03/07/求圆的周长和面积/">
-        求圆的周长和面积(#define&#include) →
+    <a class="pull-right" href="/2021/03/09/获取当前系统的时间/">
+        获取当前系统的时间(输出日期时间) →
     </a>
     
 </nav>

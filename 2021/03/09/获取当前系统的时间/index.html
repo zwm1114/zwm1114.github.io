@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>获取当前系统的时间 | 一颗土豆子</title>
+  <title>获取当前系统的时间(输出日期时间) | 一颗土豆子</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -84,7 +84,7 @@
 				  	
 				    <li><a href="/categories/C语言/" class="animsition-link">C语言<small>(0)</small></a></li>
 				    
-				    <li><a href="/categories/C语言基础编程题/" class="animsition-link">C语言基础编程题<small>(42)</small></a></li>
+				    <li><a href="/categories/C语言基础编程题/" class="animsition-link">C语言基础编程题<small>(46)</small></a></li>
 				    
 				    <li><a href="/categories/常用技能/" class="animsition-link">常用技能<small>(2)</small></a></li>
 				    
@@ -168,25 +168,33 @@
     
     
 </span>
-                <h1>获取当前系统的时间</h1>
+                <h1>获取当前系统的时间(输出日期时间)</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
       		<h3 id="获取当前系统的时间"><a href="#获取当前系统的时间" class="headerlink" title="获取当前系统的时间"></a>获取当前系统的时间</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/9 20:46:45</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">time_t</span> ts = time(<span class="literal">NULL</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"UTC:%s\n"</span>,asctime(gmtime(&amp;ts)));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"local time:%s\n"</span>,asctime(localtime(&amp;ts)));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h4 id="知识拓展：ctime"><a href="#知识拓展：ctime" class="headerlink" title="知识拓展：ctime"></a>知识拓展：ctime</h4><p>char *ctime(const time_t *timer);</p>
+<ul>
+<li><p>返回一个表示当地时间的字符串，当地时间是基于参数timer.</p>
+</li>
+<li><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">time_t</span> curtimes;</span><br><span class="line">time(&amp;curtimes);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%s"</span>,ctime(&amp;curtimes));</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2021/03/09/折半插入排序算法/" style="float: left;">
-        ← 折半插入排序算法
+    <a class="pull-left" href="/2021/03/10/二维数组行列互换/" style="float: left;">
+        ← 二维数组行列互换(calloc函数&realloc函数)
     </a>
     
     
-    <a class="pull-right" href="/2021/03/09/malloc/">
-        malloc函数应用 →
+    <a class="pull-right" href="/2021/03/09/折半插入排序算法/">
+        折半插入排序算法 →
     </a>
     
 </nav>
