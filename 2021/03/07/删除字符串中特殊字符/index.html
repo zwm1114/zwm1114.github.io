@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>求素数问题 | 一颗土豆子</title>
+  <title>删除字符串中特殊字符 | 一颗土豆子</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -158,8 +158,8 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2019-07-13T04:18:03.000Z" itemprop="datePublished">
-          2019-07-13
+      <time datetime="2021-03-07T01:21:29.000Z" itemprop="datePublished">
+          2021-03-07
       </time>
     
     
@@ -168,30 +168,23 @@
     
     
 </span>
-                <h1>求素数问题</h1>
+                <h1>删除字符串中特殊字符</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h4 id="求素数问题"><a href="#求素数问题" class="headerlink" title="求素数问题"></a>求素数问题</h4><p>判断101-200之间有多少个素数，并输出所有素数。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/1 10:34:34</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i,j;</span><br><span class="line">	<span class="keyword">int</span> flag = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">101</span>;i &lt;= <span class="number">200</span>;i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(j = <span class="number">2</span>;j &lt;= <span class="built_in">sqrt</span>((<span class="keyword">double</span>)(i+<span class="number">1</span>));j++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(i%j == <span class="number">0</span>)&#123;</span><br><span class="line">				flag = <span class="number">0</span>;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(flag)&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%d "</span>,i);</span><br><span class="line">			count ++;</span><br><span class="line">		&#125;</span><br><span class="line">		flag = <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n%d"</span>,count);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="知识拓展：sqrt函数"><a href="#知识拓展：sqrt函数" class="headerlink" title="知识拓展：sqrt函数"></a>知识拓展：sqrt函数</h5><p>头文件：math.h</p>
-<p>函数原型：double sqrt(double x)</p>
-<p>返回值：X的平方值</p>
-<p>这里 i 是 int 类型要强制转换成 double型，但如果只写成 <code>sqrt(i+1)</code>也是可以的，int型可以自动转换成double型，这里使用 <code>i+1</code>而不是 <code>i</code>是为了让 <code>sqrt</code>的计算结果更大，不至于遗漏。</p>
-
+      		<h3 id="删除字符串中特殊字符"><a href="#删除字符串中特殊字符" class="headerlink" title="删除字符串中特殊字符"></a>删除字符串中特殊字符</h3>
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2019/07/13/自由落体计算/" style="float: left;">
-        ← 自由落体计算
+    <a class="pull-left" href="/2021/03/07/录入字符存储至磁盘设备/" style="float: left;">
+        ← 录入字符存储至磁盘设备
     </a>
     
     
-    <a class="pull-right" href="/2019/07/13/求水仙花数/">
-        求水仙花数 →
+    <a class="pull-right" href="/2021/03/07/八进制转换为十二进制/">
+        进制转换(gets_s函数&%o) →
     </a>
     
 </nav>
