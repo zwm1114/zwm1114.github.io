@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-03-12T05:26:47.338Z</updated>
+  <updated>2021-03-14T12:52:28.105Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>二分查找</title>
+    <link href="http://yoursite.com/2021/03/14/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
+    <id>http://yoursite.com/2021/03/14/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</id>
+    <published>2021-03-14T12:37:29.000Z</published>
+    <updated>2021-03-14T12:52:28.105Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><p>递归解法</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIZE 10</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">binarySort</span><span class="params">(<span class="keyword">int</span> high,<span class="keyword">int</span> low,<span class="keyword">int</span> *arr,<span class="keyword">int</span> num)</span></span>;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/14 20:38:25</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> arr[SIZE];</span><br><span class="line"><span class="keyword">int</span> num,pos = <span class="number">-1</span>;</span><br><span class="line"><span class="keyword">int</span> i;</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"input %d numbers:"</span>,SIZE);</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; SIZE;i++)&#123;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;arr[i]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"input the number u wanna search:"</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;num);</span><br><span class="line"></span><br><span class="line">pos = binarySort(SIZE<span class="number">-1</span>,<span class="number">0</span>,arr,num);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(pos != <span class="number">-1</span>)&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"the position is : %d\n"</span>,pos);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"not found!\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">binarySort</span><span class="params">(<span class="keyword">int</span> high,<span class="keyword">int</span> low,<span class="keyword">int</span> *arr,<span class="keyword">int</span> num)</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> mid = (high + low) / <span class="number">2</span>;</span><br><span class="line"><span class="keyword">if</span>(low &gt; high)&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(arr[mid] == num)&#123;</span><br><span class="line"><span class="keyword">return</span> mid;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(arr[mid] &gt; num)&#123;</span><br><span class="line">binarySort(mid<span class="number">-1</span>,low,arr,num);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">binarySort(high,mid+<span class="number">1</span>,arr,num);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;二分查找&quot;&gt;&lt;a href=&quot;#二分查找&quot; class=&quot;headerlink&quot; title=&quot;二分查找&quot;&gt;&lt;/a&gt;二分查找&lt;/h3&gt;&lt;p&gt;递归解法&lt;/p&gt;
+&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gut</summary>
+      
+    
+    
+    
+    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
+    
+    
+    <category term="C" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>猜谜(生成随机数 )</title>
@@ -260,30 +285,6 @@
   </entry>
   
   <entry>
-    <title>小写转大写储存文件</title>
-    <link href="http://yoursite.com/2021/03/07/%E6%B1%82%E6%A2%AF%E5%BD%A2%E9%9D%A2%E7%A7%AF%E5%85%AC%E5%BC%8F/"/>
-    <id>http://yoursite.com/2021/03/07/%E6%B1%82%E6%A2%AF%E5%BD%A2%E9%9D%A2%E7%A7%AF%E5%85%AC%E5%BC%8F/</id>
-    <published>2021-03-07T03:00:29.000Z</published>
-    <updated>2021-03-07T12:54:43.190Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="小写转大写储存文件"><a href="#小写转大写储存文件" class="headerlink" title="小写转大写储存文件"></a>小写转大写储存文件</h3><p>从键盘中输入一个字符串，将小写字母全部转换为大写字母，然后输出到磁盘文件“test”中保存</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctype.h&gt; </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXSIZE 20</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/7 20:29:09</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">char</span> str[MAXSIZE];</span><br><span class="line">FILE *fp;</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"input string:"</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%s"</span>,str);</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(str[i] != <span class="string">'\0'</span>)&#123;</span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">isalpha</span>(str[i]) &amp;&amp; <span class="built_in">islower</span>(str[i]))&#123;</span><br><span class="line">str[i] = <span class="built_in">toupper</span>(str[i]);</span><br><span class="line">&#125;</span><br><span class="line">i++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>((fp = fopen(<span class="string">"D:\\test.txt"</span>,<span class="string">"w"</span>))== <span class="literal">NULL</span>)&#123;</span><br><span class="line"><span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">"Can't create output file.\n"</span>);</span><br><span class="line"><span class="built_in">exit</span>(<span class="number">3</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">fputs</span>(str,fp);</span><br><span class="line"></span><br><span class="line">fclose(fp);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><ol><li><code>(fp = fopen(&quot;D:\\test.txt&quot;,&quot;w&quot;))== NULL</code>应添加括号</li><li>stdlib.h提供exit()的原型</li><li>注意打开文件之后应该关闭文件</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;小写转大写储存文件&quot;&gt;&lt;a href=&quot;#小写转大写储存文件&quot; class=&quot;headerlink&quot; title=&quot;小写转大写储存文件&quot;&gt;&lt;/a&gt;小写转大写储存文件&lt;/h3&gt;&lt;p&gt;从键盘中输入一个字符串，将小写字母全部转换为大写字母，然后输出到磁盘文件“test”</summary>
-      
-    
-    
-    
-    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
-    
-    
-    <category term="C" scheme="http://yoursite.com/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
     <title>求圆的周长和面积(#define&amp;#include)</title>
     <link href="http://yoursite.com/2021/03/07/%E6%B1%82%E5%9C%86%E7%9A%84%E5%91%A8%E9%95%BF%E5%92%8C%E9%9D%A2%E7%A7%AF/"/>
     <id>http://yoursite.com/2021/03/07/%E6%B1%82%E5%9C%86%E7%9A%84%E5%91%A8%E9%95%BF%E5%92%8C%E9%9D%A2%E7%A7%AF/</id>
@@ -296,6 +297,30 @@
       
       
     <summary type="html">&lt;h3 id=&quot;求圆的周长和面积&quot;&gt;&lt;a href=&quot;#求圆的周长和面积&quot; class=&quot;headerlink&quot; title=&quot;求圆的周长和面积&quot;&gt;&lt;/a&gt;求圆的周长和面积&lt;/h3&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=</summary>
+      
+    
+    
+    
+    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
+    
+    
+    <category term="C" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小写转大写储存文件</title>
+    <link href="http://yoursite.com/2021/03/07/%E6%B1%82%E6%A2%AF%E5%BD%A2%E9%9D%A2%E7%A7%AF%E5%85%AC%E5%BC%8F/"/>
+    <id>http://yoursite.com/2021/03/07/%E6%B1%82%E6%A2%AF%E5%BD%A2%E9%9D%A2%E7%A7%AF%E5%85%AC%E5%BC%8F/</id>
+    <published>2021-03-07T03:00:29.000Z</published>
+    <updated>2021-03-07T12:54:43.190Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="小写转大写储存文件"><a href="#小写转大写储存文件" class="headerlink" title="小写转大写储存文件"></a>小写转大写储存文件</h3><p>从键盘中输入一个字符串，将小写字母全部转换为大写字母，然后输出到磁盘文件“test”中保存</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctype.h&gt; </span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXSIZE 20</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/7 20:29:09</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">char</span> str[MAXSIZE];</span><br><span class="line">FILE *fp;</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"input string:"</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%s"</span>,str);</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(str[i] != <span class="string">'\0'</span>)&#123;</span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">isalpha</span>(str[i]) &amp;&amp; <span class="built_in">islower</span>(str[i]))&#123;</span><br><span class="line">str[i] = <span class="built_in">toupper</span>(str[i]);</span><br><span class="line">&#125;</span><br><span class="line">i++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>((fp = fopen(<span class="string">"D:\\test.txt"</span>,<span class="string">"w"</span>))== <span class="literal">NULL</span>)&#123;</span><br><span class="line"><span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, <span class="string">"Can't create output file.\n"</span>);</span><br><span class="line"><span class="built_in">exit</span>(<span class="number">3</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">fputs</span>(str,fp);</span><br><span class="line"></span><br><span class="line">fclose(fp);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><ol><li><code>(fp = fopen(&quot;D:\\test.txt&quot;,&quot;w&quot;))== NULL</code>应添加括号</li><li>stdlib.h提供exit()的原型</li><li>注意打开文件之后应该关闭文件</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;小写转大写储存文件&quot;&gt;&lt;a href=&quot;#小写转大写储存文件&quot; class=&quot;headerlink&quot; title=&quot;小写转大写储存文件&quot;&gt;&lt;/a&gt;小写转大写储存文件&lt;/h3&gt;&lt;p&gt;从键盘中输入一个字符串，将小写字母全部转换为大写字母，然后输出到磁盘文件“test”</summary>
       
     
     
@@ -336,14 +361,15 @@
     <link href="http://yoursite.com/2021/03/07/%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/"/>
     <id>http://yoursite.com/2021/03/07/%E5%88%A0%E9%99%A4%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6/</id>
     <published>2021-03-07T01:21:29.000Z</published>
-    <updated>2021-03-13T14:03:52.506Z</updated>
+    <updated>2021-03-14T12:36:53.644Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="删除字符串中特殊字符"><a href="#删除字符串中特殊字符" class="headerlink" title="删除字符串中特殊字符"></a>删除字符串中特殊字符</h3>]]></content>
+    <content type="html"><![CDATA[<h3 id="删除字符串中特殊字符"><a href="#删除字符串中特殊字符" class="headerlink" title="删除字符串中特殊字符"></a>删除字符串中特殊字符</h3><p>从键盘输入字符串，删除除字母以外的其他字符</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctype.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXSIZE 20</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/14 20:04:36</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">char</span> str[MAXSIZE];</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">0</span>,j = <span class="number">0</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"input:"</span>);</span><br><span class="line">fgets(str,(<span class="keyword">sizeof</span> str / <span class="keyword">sizeof</span> str[<span class="number">0</span>]),<span class="built_in">stdin</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(str[i] != <span class="string">'\0'</span>)&#123;</span><br><span class="line"><span class="keyword">if</span>(!<span class="built_in">isalpha</span>(str[i]))&#123;</span><br><span class="line">j = i;</span><br><span class="line"><span class="keyword">while</span>(str[j] != <span class="string">'\0'</span>)&#123;</span><br><span class="line">str[j] = str[j+<span class="number">1</span>];</span><br><span class="line">j++;</span><br><span class="line">&#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">i++;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%s\n"</span>,str);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
-    <summary type="html">&lt;h3 id=&quot;删除字符串中特殊字符&quot;&gt;&lt;a href=&quot;#删除字符串中特殊字符&quot; class=&quot;headerlink&quot; title=&quot;删除字符串中特殊字符&quot;&gt;&lt;/a&gt;删除字符串中特殊字符&lt;/h3&gt;</summary>
+    <summary type="html">&lt;h3 id=&quot;删除字符串中特殊字符&quot;&gt;&lt;a href=&quot;#删除字符串中特殊字符&quot; class=&quot;headerlink&quot; title=&quot;删除字符串中特殊字符&quot;&gt;&lt;/a&gt;删除字符串中特殊字符&lt;/h3&gt;&lt;p&gt;从键盘输入字符串，删除除字母以外的其他字符&lt;/p&gt;
+&lt;figure clas</summary>
       
     
     
@@ -471,31 +497,6 @@
 &lt;p&gt;1 2 1&lt;/p&gt;
 &lt;p&gt;1 3 3 1&lt;/p&gt;
 &lt;p&gt;1 4 6 4 1&lt;</summary>
-      
-    
-    
-    
-    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
-    
-    
-    <category term="C" scheme="http://yoursite.com/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>将数组逆序输出</title>
-    <link href="http://yoursite.com/2021/03/05/%E5%B0%86%E6%95%B0%E7%BB%84%E9%80%86%E5%BA%8F%E8%BE%93%E5%87%BA/"/>
-    <id>http://yoursite.com/2021/03/05/%E5%B0%86%E6%95%B0%E7%BB%84%E9%80%86%E5%BA%8F%E8%BE%93%E5%87%BA/</id>
-    <published>2021-03-05T06:25:29.000Z</published>
-    <updated>2021-03-05T07:03:44.672Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="将数组逆序输出"><a href="#将数组逆序输出" class="headerlink" title="将数组逆序输出"></a>将数组逆序输出</h3><p>逆向输出数组的值</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> *,<span class="keyword">int</span> *)</span></span>;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/5 14:46:33</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> n,i,j;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"how many numbers it contains: "</span>);</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line"><span class="keyword">int</span> arr[n];</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"input an array:"</span>);</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; n;i++)&#123;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;arr[i]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"original: "</span>);</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; n;i++)&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d "</span>,arr[i]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>,j = (n<span class="number">-1</span>);i &lt; j;i++,j--)&#123;</span><br><span class="line">swap(arr+i,arr+j);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"result: "</span>);</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; n;i++)&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d "</span>,arr[i]);</span><br><span class="line">&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> *a,<span class="keyword">int</span> *b)</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> temp;</span><br><span class="line">temp = *a;</span><br><span class="line">*a = *b;</span><br><span class="line">*b = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;将数组逆序输出&quot;&gt;&lt;a href=&quot;#将数组逆序输出&quot; class=&quot;headerlink&quot; title=&quot;将数组逆序输出&quot;&gt;&lt;/a&gt;将数组逆序输出&lt;/h3&gt;&lt;p&gt;逆向输出数组的值&lt;/p&gt;
-&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;t</summary>
       
     
     
