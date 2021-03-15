@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>插入数字到有序数组 | 一颗土豆子</title>
+  <title>文件操作 | 一颗土豆子</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -158,8 +158,8 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2021-03-05T06:25:29.000Z" itemprop="datePublished">
-          2021-03-05
+      <time datetime="2021-03-15T07:02:07.627Z" itemprop="datePublished">
+          2021-03-15
       </time>
     
     
@@ -168,12 +168,32 @@
     
     
 </span>
-                <h1>插入数字到有序数组</h1>
+                <h1>文件操作</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h3 id="插入数字到有序数组"><a href="#插入数字到有序数组" class="headerlink" title="插入数字到有序数组"></a>插入数字到有序数组</h3><p>现有一个已经排好序的数组，输入一个数据，要求按原来的规律将它插入数组中，仍保持有序。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/5 14:28:44</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> arr[<span class="number">6</span>] = &#123;<span class="number">10</span>,<span class="number">20</span>,<span class="number">30</span>,<span class="number">40</span>,<span class="number">50</span>&#125;;</span><br><span class="line">	<span class="keyword">int</span> num;</span><br><span class="line">	<span class="keyword">int</span> n = <span class="number">5</span>,i,j;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"input number: "</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;num);</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"original: "</span>);</span><br><span class="line">	<span class="keyword">for</span>(j = <span class="number">0</span>;j &lt; n;j++)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>,arr[j]);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; n;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(arr[i] &gt; num)&#123;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(j = (n<span class="number">-1</span>);j &gt;= i;j --)&#123;</span><br><span class="line">		arr[j+<span class="number">1</span>] = arr[j];</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	arr[i] = num;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"result: "</span>);</span><br><span class="line">	<span class="keyword">for</span>(j = <span class="number">0</span>;j &lt;= n;j++)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%d "</span>,arr[j]);</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      		<h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><h4 id="读文件"><a href="#读文件" class="headerlink" title="读文件"></a>读文件</h4><p>例如文件中是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">157</span><br><span class="line">0</span><br><span class="line">9</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h5 id="fgetc函数"><a href="#fgetc函数" class="headerlink" title="fgetc函数"></a>fgetc函数</h5></li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n;</span><br><span class="line">n = fgetc(fp); <span class="comment">// n = 1</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>fgets函数</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fgets(str,N,fp);<span class="comment">//str中是157</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h5 id="fscanf函数"><a href="#fscanf函数" class="headerlink" title="fscanf函数"></a>fscanf函数</h5></li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">fscanf</span>(fp,<span class="string">"%d"</span>,&amp;n);<span class="comment">//n=157</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="写文件"><a href="#写文件" class="headerlink" title="写文件"></a>写文件</h4><ul>
+<li>fputc函数</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fputc(<span class="string">'T'</span>,fp);<span class="comment">//将字符'T'写入fp所指文件</span></span><br></pre></td></tr></table></figure>
 
 
             <div class="clearfix"></div>
@@ -181,13 +201,9 @@
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
     
-    <a class="pull-left" href="/2021/03/05/杨辉三角/" style="float: left;">
-        ← 杨辉三角(二维数组的初始化)
-    </a>
     
-    
-    <a class="pull-right" href="/2021/03/05/将数组逆序输出/">
-        将数组逆序输出 →
+    <a class="pull-right" href="/2021/03/14/二分查找/">
+        二分查找 →
     </a>
     
 </nav>

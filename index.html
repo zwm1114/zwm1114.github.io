@@ -82,7 +82,7 @@
         		<a class="sb-toggle-submenu">Categories<span class="sb-caret"></span></a>
             	<ul class="sb-submenu">
 				  	
-				    <li><a href="/categories/C语言/" class="animsition-link">C语言<small>(0)</small></a></li>
+				    <li><a href="/categories/C语言/" class="animsition-link">C语言<small>(1)</small></a></li>
 				    
 				    <li><a href="/categories/C语言基础编程题/" class="animsition-link">C语言基础编程题<small>(48)</small></a></li>
 				    
@@ -186,6 +186,64 @@
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2021/03/15/文件操作/">文件操作</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2021-03-15T07:02:07.627Z" itemprop="datePublished">
+          2021-03-15
+      </time>
+    
+    
+    | 
+    <a href='/tags/C/'>C</a>
+    
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        文件操作读文件例如文件中是
+12315709
+
+
+fgetc函数
+
+12int n;n = fgetc(fp); // n = 1
+
+
+fgets函数
+
+1fgets(str,N,fp);//str中是157
+
+
+fscanf函数
+
+1fscanf(fp,"%d",&amp;n);//n=157
+
+写文件
+fputc函数
+
+1fputc('T',fp);//将字符'T'写入fp所指文件
+
+
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2021/03/15/文件操作/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -368,7 +426,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2021/03/09/获取当前系统的时间/">获取当前系统的时间(输出日期时间)</a></h3>
+                    <h3><a href="/2021/03/09/malloc/">malloc函数应用</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2021-03-09T08:25:51.000Z" itemprop="datePublished">
@@ -386,12 +444,12 @@
                 <div class="col-md-8">
                     <p>
                       
-                        获取当前系统的时间12345678910111213141516#include &lt;stdio.h&gt;#include &lt;time.h&gt;/*  Author:zoe  Date: 2021/3/9 20:46:45*/int main()&#123;	time_t ts = time(NULL);		printf("UTC:%s\n",asctime(gmtime(&amp;ts)));	printf("local
+                        malloc函数应用12345678910111213141516171819202122#include &lt;stdio.h&gt;#include &lt;string.h&gt;#include &lt;stdlib.h&gt;/*  Author:zoe  Date: 2021/3/9 20:52:33*/int main()&#123;	char *str;	int n = 20;	str = (char *)malloc
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2021/03/09/获取当前系统的时间/">Read More...</a>
+                        <a href="/2021/03/09/malloc/">Read More...</a>
                     </p>
                     
                 </div>
@@ -438,7 +496,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
                 <div class="col-md-4">
-                    <h3><a href="/2021/03/09/malloc/">malloc函数应用</a></h3>
+                    <h3><a href="/2021/03/09/获取当前系统的时间/">获取当前系统的时间(输出日期时间)</a></h3>
                     <span>
                         <span class="post-meta">
       <time datetime="2021-03-09T08:25:51.000Z" itemprop="datePublished">
@@ -456,12 +514,12 @@
                 <div class="col-md-8">
                     <p>
                       
-                        malloc函数应用12345678910111213141516171819202122#include &lt;stdio.h&gt;#include &lt;string.h&gt;#include &lt;stdlib.h&gt;/*  Author:zoe  Date: 2021/3/9 20:52:33*/int main()&#123;	char *str;	int n = 20;	str = (char *)malloc
+                        获取当前系统的时间12345678910111213141516#include &lt;stdio.h&gt;#include &lt;time.h&gt;/*  Author:zoe  Date: 2021/3/9 20:46:45*/int main()&#123;	time_t ts = time(NULL);		printf("UTC:%s\n",asctime(gmtime(&amp;ts)));	printf("local
                       
                     </p>
                     
                     <p class="pull-right readMore">
-                        <a href="/2021/03/09/malloc/">Read More...</a>
+                        <a href="/2021/03/09/获取当前系统的时间/">Read More...</a>
                     </p>
                     
                 </div>
@@ -500,42 +558,6 @@ ABCDEFG…WXYZ
                     
                     <p class="pull-right readMore">
                         <a href="/2021/03/09/判断数字能否同时被3和5整除/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2021/03/09/汉诺塔问题/">汉诺塔问题</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2021-03-09T02:00:51.000Z" itemprop="datePublished">
-          2021-03-09
-      </time>
-    
-    
-    | 
-    <a href='/tags/C/'>C</a>
-    
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        汉诺塔问题汉诺塔（Tower of Hanoi），是一个源于印度古老传说的益智玩具。大梵天创造世界的时候做了三根金刚石柱子，在一根柱子上从下往上按照大小顺序摞着64片黄金圆盘。大梵天命令婆罗门把圆盘从下面开始按大小顺序重新摆放在另一根柱子上。并且规定，在小圆盘上不能放大圆盘，在三根柱子之间一次只能移动一个圆盘。
-123456789101112131415161718192021222324252627282930313233#inclu
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2021/03/09/汉诺塔问题/">Read More...</a>
                     </p>
                     
                 </div>
