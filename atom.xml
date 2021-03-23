@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-03-20T14:44:35.437Z</updated>
+  <updated>2021-03-23T09:58:28.849Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>统计单词出现次数</title>
+    <link href="http://yoursite.com/2021/03/23/%E7%BB%9F%E8%AE%A1%E5%8D%95%E8%AF%8D%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0/"/>
+    <id>http://yoursite.com/2021/03/23/%E7%BB%9F%E8%AE%A1%E5%8D%95%E8%AF%8D%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0/</id>
+    <published>2021-03-23T09:19:20.000Z</published>
+    <updated>2021-03-23T09:58:28.849Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="统计单词出现次数"><a href="#统计单词出现次数" class="headerlink" title="统计单词出现次数"></a>统计单词出现次数</h3><p>从文件data.dat中读入一段英文，要求分隔符为空格、英文句号、英文逗号，编写程序读出该段英文，将单词分割出来并统计和输出每个单词出现的次数。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ctype.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIZE 20</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXSIZE 200</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/22 20:12:33</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> </span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">char</span> a[SIZE];</span><br><span class="line"><span class="keyword">int</span> count;</span><br><span class="line">&#125;*LinkList;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">binarySort</span><span class="params">(LinkList <span class="built_in">list</span>[],<span class="keyword">int</span> *index,LinkList newNode)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">FILE *fp;</span><br><span class="line"><span class="keyword">char</span> str[MAXSIZE];</span><br><span class="line"><span class="keyword">int</span> i,len,j;</span><br><span class="line"><span class="keyword">int</span> index = <span class="number">-1</span>;</span><br><span class="line">LinkList <span class="built_in">list</span>[MAXSIZE];</span><br><span class="line">LinkList newNode;</span><br><span class="line"><span class="keyword">if</span>((fp = fopen(<span class="string">"D:\\test\\data.dat"</span>,<span class="string">"r"</span>)) == <span class="literal">NULL</span>)&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"cannot open the file!\n"</span>);</span><br><span class="line"><span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line">fgets(str,MAXSIZE,fp);</span><br><span class="line">len = <span class="built_in">strlen</span>(str);</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; len;i++)&#123;</span><br><span class="line">j = <span class="number">0</span>;</span><br><span class="line">newNode = (LinkList)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(LinkList));</span><br><span class="line">newNode-&gt;count = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span>(str[i] != <span class="string">' '</span> &amp;&amp; str[i] != <span class="string">','</span> &amp;&amp; str[i] != <span class="string">'.'</span> &amp;&amp; str[i] != <span class="string">'\n'</span>)&#123;</span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">isupper</span>(str[i]))&#123;</span><br><span class="line">newNode-&gt;a[j] = <span class="built_in">tolower</span>(str[i]);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">newNode-&gt;a[j] = str[i];</span><br><span class="line">&#125;</span><br><span class="line">j ++;</span><br><span class="line">i ++;</span><br><span class="line">&#125;</span><br><span class="line">newNode-&gt;a[j] = <span class="string">'\0'</span>;</span><br><span class="line">binarySort(<span class="built_in">list</span>,&amp;index,newNode);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>;i &lt;= index;i++)&#123;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%s:%d\n"</span>,<span class="built_in">list</span>[i]-&gt;a,<span class="built_in">list</span>[i]-&gt;count);</span><br><span class="line">&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">binarySort</span><span class="params">(LinkList <span class="built_in">list</span>[],<span class="keyword">int</span> *index,LinkList newNode)</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> low;</span><br><span class="line"><span class="keyword">int</span> high,mid;</span><br><span class="line"><span class="keyword">int</span> j;</span><br><span class="line"><span class="comment">//if empty</span></span><br><span class="line"><span class="keyword">if</span>(*index == <span class="number">-1</span>)&#123;</span><br><span class="line"><span class="built_in">list</span>[<span class="number">0</span>] = newNode;</span><br><span class="line">(*index)++;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">low = <span class="number">0</span>;</span><br><span class="line">high = *index;</span><br><span class="line"><span class="keyword">while</span>(low &lt;= high)&#123;</span><br><span class="line">mid = (low + high) / <span class="number">2</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">strcmp</span>(<span class="built_in">list</span>[mid]-&gt;a,newNode-&gt;a) &gt; <span class="number">0</span>)&#123;</span><br><span class="line">high = mid <span class="number">-1</span>;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">strcmp</span>(<span class="built_in">list</span>[mid]-&gt;a,newNode-&gt;a) &lt; <span class="number">0</span>)&#123;</span><br><span class="line">low = mid + <span class="number">1</span>;</span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">strcmp</span>(<span class="built_in">list</span>[mid]-&gt;a,newNode-&gt;a) == <span class="number">0</span>)&#123;</span><br><span class="line"><span class="built_in">list</span>[mid]-&gt;count++;</span><br><span class="line"><span class="keyword">return</span>;<span class="comment">//found</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//haven't found,insert</span></span><br><span class="line"><span class="keyword">if</span>(low &gt; high)&#123;</span><br><span class="line">j = *index;</span><br><span class="line"><span class="keyword">while</span>(j &gt;= low)&#123;</span><br><span class="line"><span class="built_in">list</span>[j+<span class="number">1</span>] = <span class="built_in">list</span>[j];</span><br><span class="line">j--;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">list</span>[low] = newNode;</span><br><span class="line">(*index)++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="猜谜"><a href="#猜谜" class="headerlink" title="猜谜"></a>猜谜</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;统计单词出现次数&quot;&gt;&lt;a href=&quot;#统计单词出现次数&quot; class=&quot;headerlink&quot; title=&quot;统计单词出现次数&quot;&gt;&lt;/a&gt;统计单词出现次数&lt;/h3&gt;&lt;p&gt;从文件data.dat中读入一段英文，要求分隔符为空格、英文句号、英文逗号，编写程序读出该段</summary>
+      
+    
+    
+    
+    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
+    
+    
+    <category term="C" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>字符串左旋</title>
@@ -189,30 +213,6 @@
   </entry>
   
   <entry>
-    <title>获取当前系统的时间(输出日期时间)</title>
-    <link href="http://yoursite.com/2021/03/09/%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%97%B6%E9%97%B4/"/>
-    <id>http://yoursite.com/2021/03/09/%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%97%B6%E9%97%B4/</id>
-    <published>2021-03-09T08:25:51.000Z</published>
-    <updated>2021-03-12T08:21:27.517Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="获取当前系统的时间"><a href="#获取当前系统的时间" class="headerlink" title="获取当前系统的时间"></a>获取当前系统的时间</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/9 20:46:45</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">time_t</span> ts = time(<span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"UTC:%s\n"</span>,asctime(gmtime(&amp;ts)));</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"local time:%s\n"</span>,asctime(localtime(&amp;ts)));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="知识拓展：ctime"><a href="#知识拓展：ctime" class="headerlink" title="知识拓展：ctime"></a>知识拓展：ctime</h4><p>char *ctime(const time_t *timer);</p><ul><li><p>返回一个表示当地时间的字符串，当地时间是基于参数timer.</p></li><li><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">time_t</span> curtimes;</span><br><span class="line">time(&amp;curtimes);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%s"</span>,ctime(&amp;curtimes));</span><br></pre></td></tr></table></figure></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;获取当前系统的时间&quot;&gt;&lt;a href=&quot;#获取当前系统的时间&quot; class=&quot;headerlink&quot; title=&quot;获取当前系统的时间&quot;&gt;&lt;/a&gt;获取当前系统的时间&lt;/h3&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cl</summary>
-      
-    
-    
-    
-    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
-    
-    
-    <category term="C" scheme="http://yoursite.com/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
     <title>折半插入排序算法</title>
     <link href="http://yoursite.com/2021/03/09/%E6%8A%98%E5%8D%8A%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
     <id>http://yoursite.com/2021/03/09/%E6%8A%98%E5%8D%8A%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</id>
@@ -225,6 +225,30 @@
       
       
     <summary type="html">&lt;h3 id=&quot;折半插入排序算法&quot;&gt;&lt;a href=&quot;#折半插入排序算法&quot; class=&quot;headerlink&quot; title=&quot;折半插入排序算法&quot;&gt;&lt;/a&gt;折半插入排序算法&lt;/h3&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=</summary>
+      
+    
+    
+    
+    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
+    
+    
+    <category term="C" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>获取当前系统的时间(输出日期时间)</title>
+    <link href="http://yoursite.com/2021/03/09/%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%97%B6%E9%97%B4/"/>
+    <id>http://yoursite.com/2021/03/09/%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%97%B6%E9%97%B4/</id>
+    <published>2021-03-09T08:25:51.000Z</published>
+    <updated>2021-03-12T08:21:27.517Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="获取当前系统的时间"><a href="#获取当前系统的时间" class="headerlink" title="获取当前系统的时间"></a>获取当前系统的时间</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/9 20:46:45</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">time_t</span> ts = time(<span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"UTC:%s\n"</span>,asctime(gmtime(&amp;ts)));</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"local time:%s\n"</span>,asctime(localtime(&amp;ts)));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="知识拓展：ctime"><a href="#知识拓展：ctime" class="headerlink" title="知识拓展：ctime"></a>知识拓展：ctime</h4><p>char *ctime(const time_t *timer);</p><ul><li><p>返回一个表示当地时间的字符串，当地时间是基于参数timer.</p></li><li><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">time_t</span> curtimes;</span><br><span class="line">time(&amp;curtimes);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%s"</span>,ctime(&amp;curtimes));</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;获取当前系统的时间&quot;&gt;&lt;a href=&quot;#获取当前系统的时间&quot; class=&quot;headerlink&quot; title=&quot;获取当前系统的时间&quot;&gt;&lt;/a&gt;获取当前系统的时间&lt;/h3&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td cl</summary>
       
     
     
@@ -468,31 +492,6 @@
       
       
     <summary type="html">&lt;h3 id=&quot;计算字符串中子串出现的次数&quot;&gt;&lt;a href=&quot;#计算字符串中子串出现的次数&quot; class=&quot;headerlink&quot; title=&quot;计算字符串中子串出现的次数&quot;&gt;&lt;/a&gt;计算字符串中子串出现的次数&lt;/h3&gt;&lt;figure class=&quot;highlight c&quot;&gt;&lt;</summary>
-      
-    
-    
-    
-    <category term="C语言基础编程题" scheme="http://yoursite.com/categories/C语言基础编程题/"/>
-    
-    
-    <category term="C" scheme="http://yoursite.com/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>求字符串长度</title>
-    <link href="http://yoursite.com/2021/03/05/%E6%B1%82%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%95%BF%E5%BA%A6/"/>
-    <id>http://yoursite.com/2021/03/05/%E6%B1%82%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%95%BF%E5%BA%A6/</id>
-    <published>2021-03-05T07:41:29.000Z</published>
-    <updated>2021-03-06T08:30:10.744Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="求字符串长度"><a href="#求字符串长度" class="headerlink" title="求字符串长度"></a>求字符串长度</h3><p>设计字符串长度函数</p><p>写一个函数，求一个字符串的长度，在main函数中输入字符串，并输出长度。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXSIZE 20</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getlen</span><span class="params">(<span class="keyword">char</span> *)</span></span>;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">  Author:zoe</span></span><br><span class="line"><span class="comment">  Date: 2021/3/6 15:41:53</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">char</span> str[MAXSIZE];</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"input string:"</span>);</span><br><span class="line">fgets(str,MAXSIZE,<span class="built_in">stdin</span>);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"the length is: %d"</span>,getlen(str));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getlen</span><span class="params">(<span class="keyword">char</span> *str)</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> *p = str,*s = str;</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span>(*(++s)!= <span class="string">'\n'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> s-p;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="知识拓展：fgets函数"><a href="#知识拓展：fgets函数" class="headerlink" title="知识拓展：fgets函数"></a>知识拓展：fgets函数</h4><p>字符串的末尾是一个 <code>\0</code>，但是，fgets()函数把换行符放在字符串的末尾，所以用fgets输入得到的字符串是 <code>XXXX\n\0</code> <code>\0</code>表示字符串的结尾</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;求字符串长度&quot;&gt;&lt;a href=&quot;#求字符串长度&quot; class=&quot;headerlink&quot; title=&quot;求字符串长度&quot;&gt;&lt;/a&gt;求字符串长度&lt;/h3&gt;&lt;p&gt;设计字符串长度函数&lt;/p&gt;
-&lt;p&gt;写一个函数，求一个字符串的长度，在main函数中输入字符串，并输出长度。&lt;</summary>
       
     
     
